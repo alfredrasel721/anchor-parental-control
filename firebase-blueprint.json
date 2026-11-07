@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "FamilyHousehold": {
+      "title": "FamilyHousehold",
+      "description": "Shared synchronized family household document accessed by both the Anchor Parent APK (com.anchor.parent) and Anchor Child APK (com.anchor.child).",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Household document ID" },
+        "householdName": { "type": "string", "description": "Display name of the family household (e.g., The Jenkins Household)" },
+        "primaryGuardianUid": { "type": "string", "description": "UID of the primary guardian creator" },
+        "primaryGuardianEmail": { "type": "string", "description": "Email of the primary guardian" },
+        "memberUids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Authorized guardian and paired child device UIDs"
+        },
+        "subscriptionTier": {
+          "type": "string",
+          "enum": ["free", "annual_trial", "monthly_premium"],
+          "description": "Current household subscription entitlement tier"
+        },
+        "pairingCode": { "type": "string", "description": "Active 6-digit temporary device pairing code" },
+        "pairingExpiresAt": { "type": "number", "description": "Epoch ms when the pairing code expires" },
+        "selectedChildId": { "type": "string", "description": "Currently focused child profile ID" },
+        "deviceBatteryLevel": { "type": "number", "description": "Current active child device battery percentage (0-100)" },
+        "lastKnownBatterySync": { "type": "string", "description": "Human-readable or ISO timestamp of last battery telemetry sync" },
+        "payloadJson": { "type": "string", "description": "Serialized JSON state for children, devices, rules, schedules, geofences, alerts, requests, chat, tasks, filters, and consent-based live session state" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "ISO timestamp of last synchronization" }
+      },
+      "required": [
+        "id",
+        "householdName",
+        "primaryGuardianUid",
+        "memberUids",
+        "subscriptionTier",
+        "pairingCode",
+        "payloadJson",
+        "updatedAt"
+      ]
+    },
+    "PairingHandshake": {
+      "title": "PairingHandshake",
+      "description": "Temporary lookup document mapping a 6-digit pairing code to a familyId so a Child App device can pair securely.",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "description": "6-digit numeric pairing code" },
+        "familyId": { "type": "string", "description": "Target family household ID" },
+        "childId": { "type": "string", "description": "Target child profile ID" },
+        "createdByUid": { "type": "string", "description": "Guardian UID who issued the code" },
+        "expiresAt": { "type": "number", "description": "Epoch ms expiration timestamp" },
+        "status": {
+          "type": "string",
+          "enum": ["waiting", "paired", "expired"],
+          "description": "Pairing handshake status"
+        }
+      },
+      "required": ["code", "familyId", "childId", "createdByUid", "expiresAt", "status"]
+    }
+  },
+  "firestore": {
+    "/families/{familyId}": {
+      "schema": { "$ref": "#/entities/FamilyHousehold" },
+      "description": "Synchronized family household state shared between Parent App and Child App."
+    },
+    "/pairings/{code}": {
+      "schema": { "$ref": "#/entities/PairingHandshake" },
+      "description": "Short-lived 6-digit pairing codes for linking Child App devices to a family."
+    }
+  }
+}

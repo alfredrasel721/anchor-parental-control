@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary": "#ffffff", "on-tertiary": "#ffffff", "surface-dim": "#d1daeb", "secondary-container": "#94f1d6", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#291800", "on-tertiary-container": "#ffc56f", "tertiary-fixed": "#ffddb1", "inverse-surface": "#28313d", "on-error-container": "#93000a", "on-primary-container": "#beceff", "on-secondary-container": "#00705c", "primary": "#113c8d", "outline": "#747783", "background": "#f8f9ff", "outline-variant": "#c4c6d3", "primary-fixed-dim": "#b2c5ff", "surface-container-low": "#eff4ff", "error-container": "#ffdad6", "on-surface-variant": "#444651", "surface-variant": "#dae3f4", "secondary": "#006b58", "on-secondary-fixed": "#002019", "tertiary-fixed-dim": "#fbbb58", "surface-container-high": "#e0e9f9", "on-secondary-fixed-variant": "#005142", "on-background": "#131c28", "on-primary-fixed": "#001848", "tertiary": "#5a3b00", "surface-container": "#e5eeff", "error": "#ba1a1a", "outline-subtle": "#D5DCE5", "surface-bright": "#f8f9ff", "secondary-fixed": "#97f4d9", "inverse-on-surface": "#eaf1ff", "status-enforced": "#16816B", "on-surface": "#131c28", "inverse-primary": "#b2c5ff", "status-pending": "#9A6700", "secondary-fixed-dim": "#7ad7be", "surface-container-highest": "#dae3f4", "primary-container": "#3154a6", "status-failed": "#B42318", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#624000", "tertiary-container": "#795000", "on-error": "#ffffff", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "on-primary-fixed-variant": "#1b4293", "status-unsupported": "#5C6470", "surface": "#FFFFFF" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "margin-tablet": "1.5rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem", "space-xl": "1.5rem" }, fontFamily: { "label-sm": ["Inter"], "label-md": ["Inter"], "title-sm": ["Inter"], "headline-lg": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "label-lg": ["Inter"], "headline-md": ["Roboto Flex"], "body-lg": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "16px", fontWeight: "500" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }], "title-sm": ["14px", { lineHeight: "20px", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">anchor</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight whitespace-nowrap">Anchor</span></div><button class="min-h-[44px] min-w-[44px] inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface max-w-[150px]" type="button"><span class="w-2 h-2 rounded-full bg-status-enforced shrink-0"></span><span class="font-label-md text-label-md truncate text-on-surface font-medium">Leo Jenkins</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">expand_more</span></button></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Header Title & Subtitle -->
+<section class="space-y-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Location &amp; Geofences</h1>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-enforced animate-pulse"></span>
+        Live GPS (±4m)
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Real-time location, safe zone arrival alerts, and privacy-first geofence boundaries.
+    </p>
+</section>
+<!-- Live Interactive Map View Card -->
+<section class="relative w-full rounded-2xl overflow-hidden bg-surface-container shadow-md">
+<!-- Map Canvas with Static API Data Location -->
+<div class="w-full h-80 bg-cover bg-center relative" data-location="450 Oakridge Way, Portland, OR" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQDN0QiSHJbW2nWxNRJrVgestb-vWSMFQdUoQvvFLOcU3sBRBxQ4ykPXMsniDyozdC-2_mSaPzK8YSjZ6EakCYOYJTCbnC_85OltUmvtx-V7plyK8_ZCsn8omwNTNBEMhrwnGYGpSSQIPjNCaFZRriWefZ3-0tIt-k4uvdEFg5_PfsC5aRluLc7o2dEiBh85LBBTuSOAaxpIykkO1tz8QynN0GkNYVWB61TS-NG4t_')">
+<!-- Ambient map tint & decorative SVG geofence radiuses -->
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<!-- SVG Geofence Visualizations overlaying map -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<!-- School Geofence (Active green safe zone) -->
+<circle cx="50%" cy="48%" fill="#16816B" fill-opacity="0.18" r="68" stroke="#16816B" stroke-dasharray="4 4" stroke-width="2"></circle>
+<circle cx="50%" cy="48%" fill="#16816B" r="4"></circle>
+<!-- Home Geofence (Inactive blue boundary) -->
+<circle cx="20%" cy="75%" fill="#3154A6" fill-opacity="0.12" r="48" stroke="#3154A6" stroke-dasharray="3 3" stroke-width="2"></circle>
+</svg>
+<!-- Leo's Live Pin with avatar and pulse -->
+<div class="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<!-- Pulse wave -->
+<span class="absolute w-12 h-12 rounded-full bg-status-enforced opacity-30 animate-ping"></span>
+<!-- Radar ring -->
+<div class="w-10 h-10 rounded-full bg-surface shadow-md flex items-center justify-center p-0.5 z-10">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait photo of Leo, a cheerful 12-year-old boy wearing a navy blue jacket with bright soft outdoor lighting and a warm friendly expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2FGPvVB9k7NnFhFjOLmwNy6GPqND1GqXpN3Vo-hzM_MNRYddJsK_b87aHl1ZTA4yw3ytD20HDIVcMLU2SbdLHC59Er-2HP1vacFdxU1c5cVQRhX0eiLxYI4ICp9TPmZZhN1OKgPhEhNVi-hAiXILVrmOfgJ9kRpU_71IKkhUvmkMI1CukOqt9IZP4wwMZNOSAYObqEs8ZWh1-nWO_qwJAIEaYs-T4wF5D15FJTL5M"/>
+</div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-status-enforced rounded-full ring-2 ring-surface z-20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-secondary font-bold">check</span>
+</span>
+</div>
+<!-- Tooltip Label pill -->
+<div class="mt-1.5 px-space-sm py-1 rounded-full bg-surface/95 backdrop-blur-md shadow-md flex items-center gap-1.5 z-10">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight whitespace-nowrap">Leo • Oakridge Middle School</span>
+</div>
+</div>
+<!-- Top Overlay Controls -->
+<div class="absolute top-space-sm inset-x-space-sm flex justify-between items-center pointer-events-auto">
+<div class="flex items-center gap-1 bg-surface/95 backdrop-blur-md rounded-xl p-1 shadow-sm">
+<button class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors flex items-center gap-1" id="mapModeToggle" type="button">
+<span class="material-symbols-outlined text-[14px]">map</span>
+<span>Map</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+<span>Sat</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-xl bg-surface/95 backdrop-blur-md shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-status-enforced">battery_5_bar</span>
+<span class="font-label-sm text-label-sm font-semibold">78%</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GPS High Precision</span>
+</div>
+</div>
+<!-- Bottom Map Floating Action: Recenter -->
+<div class="absolute bottom-space-sm right-space-sm">
+<button aria-label="Recenter Leo's location" class="w-11 h-11 rounded-xl bg-surface text-primary shadow-md flex items-center justify-center active:scale-95 transition-transform hover:bg-surface-container-low" type="button">
+<span class="material-symbols-outlined text-[22px]">my_location</span>
+</button>
+</div>
+<!-- Geofence Labels on Map -->
+<div class="absolute bottom-3 left-3 pointer-events-none">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-surface/90 backdrop-blur text-on-surface shadow-xs font-label-sm text-[10px]">
+<span class="w-2 h-2 rounded-full bg-status-enforced"></span>
+<span>Oakridge Middle (200m)</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-surface/90 backdrop-blur text-on-surface-variant shadow-xs font-label-sm text-[10px]">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Home Sanctuary (150m)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Footer Info Bar -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">update</span>
+<span class="font-label-sm text-label-sm">Updated 30 seconds ago (West Gate Pin)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Steady Connection</span>
+</div>
+</section>
+<!-- Quick Safe Arrival Ping / Status Bar -->
+<section class="bg-surface rounded-2xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-sm text-title-sm text-on-surface">Safe at School</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-semibold uppercase tracking-wider">Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Arrived today at 8:15 AM • On schedule</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">WiFi + Cell GPS</span>
+</div>
+<!-- Action buttons row -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="min-h-[48px] px-space-sm py-space-xs rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors active:scale-[0.98]" id="pingButton" type="button">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+<span>Ping GPS</span>
+</button>
+<a class="min-h-[48px] px-space-sm py-space-xs rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-xs hover:bg-primary/95 transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Directions</span>
+</a>
+</div>
+</section>
+<!-- Configured Safe Geofences List -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">share_location</span>
+<h2 class="font-title-md text-title-md text-on-surface">Configured Safe Geofences</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Active Zones</span>
+</div>
+<!-- Geofence 1: School (Occupied) -->
+<article class="bg-surface rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Oakridge Middle School</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">450 Oakridge Way • 200m circular boundary</p>
+</div>
+</div>
+<button aria-label="Edit Oakridge Middle School zone" class="min-h-[44px] min-w-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary rounded-xl hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Real-time inside status indicator -->
+<div class="p-space-sm rounded-xl bg-secondary/10 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-status-enforced animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold">Leo is currently inside this zone</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Since 8:15 AM</span>
+</div>
+<!-- Alert recipients breakdown -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+            Notify on Arrival &amp; Departure:
+          </span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">Sarah (Mom) &amp; Mark (Dad)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_down</span>
+            Arrival alerts only:
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface">Grandma Eleanor</span>
+</div>
+</div>
+</article>
+<!-- Geofence 2: Home Sanctuary -->
+<article class="bg-surface rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">cottage</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Home Sanctuary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">742 Evergreen Terrace • 150m boundary</p>
+</div>
+</div>
+<button aria-label="Edit Home Sanctuary zone" class="min-h-[44px] min-w-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary rounded-xl hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Current status chip -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm font-medium">Currently unoccupied</span>
+</div>
+<span class="font-label-sm text-label-sm">Dep. 7:48 AM today</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-space-xs">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">nightlight</span>
+          Night departure alert rule:
+        </span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">Active after 8:00 PM</span>
+</div>
+</article>
+<!-- Geofence 3: Soccer Complex -->
+<article class="bg-surface rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">sports_soccer</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">West Soccer Complex</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Field 4 &amp; 5 • 300m boundary</p>
+</div>
+</div>
+<button aria-label="Edit West Soccer Complex zone" class="min-h-[44px] min-w-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary rounded-xl hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">calendar_clock</span>
+<span class="font-label-sm text-label-sm font-medium">Tue &amp; Thu (4:00 PM – 6:00 PM)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Scheduled: Tomorrow</span>
+</div>
+</article>
+</section>
+<!-- Anti-Covert Location Transparency Card -->
+<aside class="p-space-md rounded-2xl bg-surface-container-low text-on-surface space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">privacy_tip</span>
+<h4 class="font-title-sm text-title-sm font-semibold">Transparent Family Privacy</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Leo’s device displays an explicit geofence badge in the Android status bar whenever inside designated zones. Location telemetry is end-to-end encrypted and never sold or shared with third parties.
+    </p>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">Child Device Transparency Active</span>
+</div>
+</aside>
+<!-- Visual History Spark & Log Preview -->
+<section class="bg-surface rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">timeline</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Today's Transit Summary</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Transitions</span>
+</div>
+<!-- Mini SVG Journey sparkline -->
+<div class="py-space-xs">
+<svg class="w-full h-10 overflow-visible" fill="none" viewbox="0 0 320 40" xmlns="http://www.w3.org/2000/svg">
+<path d="M 10 20 L 90 20 L 150 20 L 280 20" stroke="#dae3f4" stroke-linecap="round" stroke-width="4"></path>
+<path d="M 10 20 L 90 20 L 150 20" stroke="#16816B" stroke-linecap="round" stroke-width="4"></path>
+<!-- Node 1: Home departure -->
+<circle cx="10" cy="20" fill="#3154A6" r="6"></circle>
+<!-- Node 2: Bus transit -->
+<circle cx="90" cy="20" fill="#16816B" r="4"></circle>
+<!-- Node 3: School arrival -->
+<circle cx="150" cy="20" fill="#16816B" r="7" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Future node: Soccer -->
+<circle cx="280" cy="20" fill="#dae3f4" r="4"></circle>
+</svg>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-[11px] pt-1">
+<span>7:48 AM Home</span>
+<span>8:02 AM Transit</span>
+<span class="text-secondary font-semibold">8:15 AM School</span>
+<span class="opacity-50">4:00 PM Soccer</span>
+</div>
+</div>
+</section>
+<!-- Core Page Actions -->
+<section class="pt-space-xs flex flex-col gap-space-sm">
+<button class="min-h-[48px] w-full px-space-lg py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md hover:bg-primary-container active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">add_location_alt</span>
+<span>Create New Safe Zone Geofence</span>
+</button>
+<button class="min-h-[48px] w-full px-space-lg py-space-sm rounded-xl bg-surface hover:bg-surface-container text-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span>View 24h Location History Log</span>
+</button>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for GPS ping button
+  document.getElementById('pingButton')?.addEventListener('click', function() {
+    const btn = this;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Locating...</span>';
+    btn.setAttribute('disabled', 'true');
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-status-enforced">check</span><span class="text-status-enforced">Ping Received</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.removeAttribute('disabled');
+      }, 2000);
+    }, 1200);
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="rules" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-sm text-label-sm mt-0.5">Rules</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs py-space-xs rounded-xl transition-colors text-primary font-label-md" data-path="location" href="#"><span class="material-symbols-outlined text-[24px]">location_on</span><span class="font-label-sm text-label-sm mt-0.5">Location</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="requests" href="#"><span class="material-symbols-outlined text-[24px]">mark_chat_unread</span><span class="font-label-sm text-label-sm mt-0.5">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-xs py-space-xs rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="family" href="#"><span class="material-symbols-outlined text-[24px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Family</span></a></div></nav></body></html>

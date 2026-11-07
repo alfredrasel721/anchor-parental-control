@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Flex:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-container-high': '#e0e9f9', 'inverse-on-surface': '#eaf1ff', 'tertiary-container': '#795000', 'secondary-container': '#94f1d6', 'on-surface': '#131c28', 'primary-container': '#3154a6', 'outline-variant': '#c4c6d3', 'on-tertiary-fixed': '#291800', 'on-secondary-fixed-variant': '#005142', 'status-pending': '#9A6700', 'error-container': '#ffdad6', 'surface': '#FFFFFF', 'surface-container-lowest': '#ffffff', 'on-secondary': '#ffffff', 'secondary-fixed': '#97f4d9', 'on-error-container': '#93000a', 'on-secondary-container': '#00705c', 'on-primary-fixed': '#001848', 'on-primary': '#ffffff', 'secondary': '#006b58', 'surface-variant': '#F2F4F8', 'secondary-fixed-dim': '#7ad7be', 'on-background': '#131c28', 'on-error': '#ffffff', 'on-tertiary-fixed-variant': '#624000', 'background': '#f8f9ff', 'tertiary-fixed': '#ffddb1', 'surface-bright': '#f8f9ff', 'surface-tint': '#385aad', 'outline-subtle': '#D5DCE5', 'on-tertiary-container': '#ffc56f', 'on-secondary-fixed': '#002019', 'surface-dim': '#d1daeb', 'inverse-primary': '#b2c5ff', 'tertiary-fixed-dim': '#fbbb58', 'on-primary-fixed-variant': '#1b4293', 'status-unsupported': '#5C6470', 'surface-container': '#E8ECF2', 'inverse-surface': '#28313d', 'surface-container-low': '#eff4ff', 'on-primary-container': '#beceff', 'primary': '#113c8d', 'primary-fixed-dim': '#b2c5ff', 'on-tertiary': '#ffffff', 'status-enforced': '#16816B', 'surface-container-highest': '#dae3f4', 'primary-fixed': '#dae2ff', 'tertiary': '#5a3b00', 'status-failed': '#B42318', 'on-surface-variant': '#444651', 'error': '#ba1a1a', 'outline': '#747783' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '1rem', 'margin-tablet': '1.5rem', 'gutter-tablet': '1.5rem', 'margin': '1rem', 'space-sm': '0.5rem', 'space-md': '0.75rem', 'space-xs': '0.25rem', 'space-xl': '1.5rem', 'space-lg': '1rem' }, fontFamily: { 'title-sm': ['Inter'], 'title-md': ['Inter'], 'label-md': ['Inter'], 'body-lg': ['Inter'], 'label-sm': ['Inter'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'headline-lg-mobile': ['Roboto Flex'], 'headline-lg': ['Roboto Flex'], 'headline-sm': ['Roboto Flex'], 'headline-md': ['Roboto Flex'], 'label-lg': ['Inter'] }, fontSize: { 'title-sm': ['14px', { lineHeight: '20px', fontWeight: '600' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', fontWeight: '500' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '16px', fontWeight: '500' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'headline-lg-mobile': ['26px', { lineHeight: '32px', fontWeight: '600' }], 'headline-lg': ['32px', { lineHeight: '40px', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '20px', fontWeight: '600' }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">anchor</span></div><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Anchor Parent</span><button class="flex items-center gap-space-xs text-left group min-h-[24px] focus:outline-none"><span class="font-title-sm text-title-sm text-on-surface truncate group-hover:text-primary transition-colors">The Jenkins Household</span><span class="material-symbols-outlined text-outline text-[18px] shrink-0">arrow_drop_down</span></button></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Alerts" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface relative focus:outline-none active:scale-95 transition-transform"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-status-failed"></span></button><a aria-label="Household Profile" class="w-11 h-11 flex items-center justify-center focus:outline-none active:scale-95 transition-transform" data-path="family-settings" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-background min-h-screen"><div class="flex flex-col w-full px-margin py-space-md space-y-space-lg">
+<!-- Breadcrumb / Header Context -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>Family Settings</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface-variant">Diagnostics</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Account &amp; Diagnostics</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Manage subscription, verify hardware encryption, and test real-time family sync pipelines.
+    </p>
+</div>
+<!-- Section 1: Account & Subscription Overview -->
+<section class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header Banner -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface">Guardian Account &amp; Tier</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        Active
+      </span>
+</div>
+<!-- Card Content -->
+<div class="p-space-lg flex flex-col space-y-space-md">
+<!-- Profile Details -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait of Sarah Jenkins, a friendly professional guardian with warm smile, ambient soft home lighting, high detail photographic portrait, calm clean composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJoPAJpk005O6CVKto1plQDIILSU8K9EehS76QA9ei5vjNkwArIIv3bynr1xIc3ApFjKUYYlnecmJgICmNATMNJDwtg6qKdDYNTJxqhW3KeIXxZBm4ijMylcWZNkFFYHOf4qNqaYI1KGw9U1SsjU6ZrDmHgzSTqWUviTuNImRqnFJ13D6cs7CJj_ZGSS7M0DpqI5KGMX3XgiOlNmilFcp9l7QFg6wqjbU6GZprY9ZP"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">sarah.j@example.com</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">Primary Guardian • Household Admin</span>
+</div>
+</div>
+</div>
+<!-- Subscription Snapshot Tile -->
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span>Anchor Family Premium</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">stars</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$79.99/year • Renews Dec 14, 2025</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Annual</span>
+</div>
+<!-- Seats Progress Bar -->
+<div class="pt-space-xs flex flex-col space-y-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-medium">Child Device Licenses</span>
+<span class="text-primary font-semibold">3 of 5 Assigned</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 60%;"></div>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant pt-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Active slots: <strong>Leo</strong> (A34), <strong>Maya</strong> (Tab S8), <strong>Ethan</strong> (Pixel 7a)</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full min-h-[48px] px-space-md py-space-sm rounded-xl bg-surface-variant hover:bg-surface-container active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm text-on-surface font-title-sm text-title-sm focus:outline-none">
+<span class="material-symbols-outlined text-[18px] text-primary">shop</span>
+<span>Manage Google Play Subscription</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Knox Hardware & Security Attestation -->
+<section class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header Banner -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block leading-tight">Samsung Knox Hardware Integrity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hardware-backed zero-trust validation</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface px-2 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-status-enforced animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Enforced</span>
+</div>
+</div>
+<!-- Attestation Body -->
+<div class="p-space-lg flex flex-col space-y-space-md">
+<!-- Target Child Hardware State -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-variant">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">smartphone</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Leo's Galaxy A34 5G</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Signed 2m ago</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Model SM-A346B • Knox Engine v3.9</span>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> SEAndroid Enforcing
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> Knox TIMA Attested
+            </span>
+</div>
+</div>
+</div>
+<!-- Security Checklist Items -->
+<div class="grid grid-cols-1 gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">key</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">TrustZone Hardware Key Vault</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Private cryptographic keys never leave the silicon enclave. Device tampering revokes local supervision tokens instantly.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm pt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">privacy_tip</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Covert Tracking Audit: 0 Modules Found</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero hidden keystroke loggers, screen scrapers, or surreptitious microphone hooks. Full compliance with Child Dignity Charter.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Live Push & Network Diagnostics Tool -->
+<section class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header Banner -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">network_check</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block leading-tight">Real-Time Pipeline Health</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Telemetry sync via Firebase Cloud Messaging</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface text-primary font-label-sm text-label-sm font-semibold">
+<span>142ms RTT</span>
+</div>
+</div>
+<!-- Diagnostic Items -->
+<div class="p-space-lg flex flex-col space-y-space-md">
+<div class="space-y-space-sm" id="diagnostic-tests-list">
+<!-- Subsystem Test 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">cloud_sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">FCM Cloud Wake Channel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Socket Active • Latency 118ms</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- Subsystem Test 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">location_searching</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Location Geofence Polling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ready • GPS accuracy 3m margin</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- Subsystem Test 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">sos</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Emergency SOS Cellular Dispatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active • Direct Carrier Route verified</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- Subsystem Test 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Knox MDM Policy Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Synced • Policy v2.1.8-RELEASE</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Action Button for Self-Test -->
+<button class="w-full min-h-[48px] px-space-md py-space-sm rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-space-sm active:scale-[0.99] transition-all focus:outline-none" id="run-test-btn">
+<span class="material-symbols-outlined text-[20px]" id="test-icon">sync</span>
+<span id="test-label">Run Full Connection Self-Test</span>
+</button>
+</div>
+</section>
+<!-- Section 4: App Preferences & Security Controls -->
+<section class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Header -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface">Parent App Controls &amp; Preferences</span>
+</div>
+<!-- Toggles List -->
+<div class="p-space-lg flex flex-col space-y-space-md">
+<!-- Item 1: Biometrics -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Require Biometrics / Screen Lock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prompt Android BiometricPrompt on app foregrounding</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 bg-primary rounded-full p-0.5 flex items-center justify-end shrink-0 transition-colors focus:outline-none" onclick="toggleSwitch(this)" role="switch" type="button">
+<div class="w-6 h-6 bg-surface rounded-full shadow-sm transform transition-transform"></div>
+</button>
+</div>
+<!-- Item 2: DND Override -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">notification_important</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Critical Alerts Override Android DND</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sound emergency alarms for SOS or geofence breaches</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 bg-primary rounded-full p-0.5 flex items-center justify-end shrink-0 transition-colors focus:outline-none" onclick="toggleSwitch(this)" role="switch" type="button">
+<div class="w-6 h-6 bg-surface rounded-full shadow-sm transform transition-transform"></div>
+</button>
+</div>
+<!-- Item 3: System Theme (Dropdown / Selector) -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">brightness_auto</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Theme Display Mode</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Adhere to device system appearance</span>
+</div>
+</div>
+<div class="px-3 py-1.5 bg-surface-variant rounded-lg font-label-md text-label-md text-on-surface font-semibold shrink-0">
+          System Default
+        </div>
+</div>
+<!-- Item 4: Offline Diagnostics Cache -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">folder_zip</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Offline Diagnostics Cache</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Retain 48h rolling latency logs for network auditing</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 bg-primary rounded-full p-0.5 flex items-center justify-end shrink-0 transition-colors focus:outline-none" onclick="toggleSwitch(this)" role="switch" type="button">
+<div class="w-6 h-6 bg-surface rounded-full shadow-sm transform transition-transform"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 5: Version & Compliance Information -->
+<section class="bg-surface rounded-xl shadow-sm p-space-lg flex flex-col space-y-space-md">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>Anchor Parent for Android</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Version 2.1.8 • Production Build #2401-KNOX-SEC
+      </p>
+</div>
+<!-- Certification Badges -->
+<div class="flex flex-wrap gap-2 pt-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span> SOC2 Type II Certified
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-variant font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">child_care</span> COPPA Tier-A Certified
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-variant font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">shield</span> GDPR Article 17 Compliant
+      </span>
+</div>
+<!-- Compliance / Audit Actions -->
+<div class="pt-space-sm flex flex-col space-y-2.5">
+<a class="flex items-center justify-between text-primary font-title-sm text-title-sm py-1 hover:underline" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+          Guardian &amp; Child Privacy Policy
+        </span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between text-secondary font-title-sm text-title-sm py-1 hover:underline" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+          Anchor Child Dignity &amp; Consent Charter
+        </span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<button class="flex items-center justify-between text-on-surface-variant font-title-sm text-title-sm py-1 hover:text-on-surface text-left focus:outline-none">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export Cryptographic System Log Bundle (.enc)
+        </span>
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  function toggleSwitch(btn) {
+    const isChecked = btn.getAttribute('aria-checked') === 'true';
+    if (isChecked) {
+      btn.setAttribute('aria-checked', 'false');
+      btn.classList.remove('bg-primary', 'justify-end');
+      btn.classList.add('bg-surface-container-high', 'justify-start');
+    } else {
+      btn.setAttribute('aria-checked', 'true');
+      btn.classList.remove('bg-surface-container-high', 'justify-start');
+      btn.classList.add('bg-primary', 'justify-end');
+    }
+  }
+
+  const testBtn = document.getElementById('run-test-btn');
+  const testIcon = document.getElementById('test-icon');
+  const testLabel = document.getElementById('test-label');
+
+  if (testBtn) {
+    testBtn.addEventListener('click', function() {
+      testIcon.classList.add('animate-spin');
+      testLabel.textContent = 'Probing Enclave & Endpoints...';
+      testBtn.disabled = true;
+
+      setTimeout(() => {
+        testIcon.classList.remove('animate-spin');
+        testLabel.textContent = 'All 4 Channels Verified (138ms)';
+        testBtn.disabled = false;
+        setTimeout(() => {
+          testLabel.textContent = 'Run Full Connection Self-Test';
+        }, 3000);
+      }, 1200);
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="parent-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="safety-rules" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label-sm text-label-sm">Rules</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="family-location" href="#"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm">Location</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="pending-requests" href="#"><span class="material-symbols-outlined text-[22px]">swap_horiz</span><span class="font-label-sm text-label-sm">Requests</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full transition-colors gap-0.5 text-primary font-semibold" data-path="family-settings" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm">Family</span></a></div></nav></body></html>

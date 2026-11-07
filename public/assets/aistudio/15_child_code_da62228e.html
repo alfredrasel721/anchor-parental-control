@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Flex:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f8f9ff", "secondary-container": "#94f1d6", "on-primary-fixed": "#001848", "error-container": "#ffdad6", "surface-tint": "#385aad", "tertiary-fixed": "#ffddb1", "surface-container-low": "#eff4ff", "status-failed": "#B42318", "outline": "#747783", "on-surface-variant": "#444651", "secondary-fixed-dim": "#7ad7be", "tertiary-fixed-dim": "#fbbb58", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#005142", "on-tertiary-container": "#ffc56f", "inverse-primary": "#b2c5ff", "status-pending": "#9A6700", "on-secondary": "#ffffff", "surface-container": "#E8ECF2", "secondary": "#006b58", "surface-container-high": "#e0e9f9", "primary-fixed": "dae2ff", "secondary-fixed": "#97f4d9", "on-surface": "#131c28", "on-secondary-container": "#00705c", "outline-subtle": "#D5DCE5", "on-tertiary-fixed-variant": "#624000", "status-unsupported": "#5C6470", "surface-container-lowest": "#ffffff", "on-background": "#131c28", "primary-fixed-dim": "#b2c5ff", "background": "#f8f9ff", "on-primary-fixed-variant": "#1b4293", "surface-container-highest": "#dae3f4", "on-tertiary-fixed": "#291800", "primary-container": "#3154a6", "tertiary": "#5a3b00", "tertiary-container": "#795000", "outline-variant": "#c4c6d3", "on-error": "#ffffff", "surface": "#FFFFFF", "surface-dim": "#d1daeb", "error": "#ba1a1a", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#28313d", "surface-variant": "#dae3f4", "on-secondary-fixed": "#002019", "on-primary-container": "#beceff", "primary": "#113c8d", "status-enforced": "#16816B" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "1rem", "space-xl": "1.5rem", "margin": "1rem", "space-lg": "1rem", "margin-tablet": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "headline-md": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Roboto Flex"], "label-lg": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "title-sm": ["Inter"], "title-md": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low"><div class="w-2 h-2 rounded-full bg-status-enforced animate-pulse"></div><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Leo, 11</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">• Galaxy A34</span></div><div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="material-symbols-outlined text-[13px]">sync</span><span class="font-label-sm text-label-sm font-semibold">Synced</span></div></div><div class="flex items-center gap-space-xs"><a class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="guardian-settings" href="#"><span class="material-symbols-outlined text-[22px]">settings</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-10 space-y-space-lg">
+<!-- Status & Reassurance Hero -->
+<section class="bg-surface-container-high rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-pending/15 flex items-center justify-center text-status-pending">
+<span class="material-symbols-outlined text-[20px]">wifi_off</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-status-pending animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">Offline Mode</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-pending font-medium ml-auto">Local Rules Active</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">
+      Device is currently offline
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      No Wi-Fi or cellular data detected. Last synchronized with Sarah & Mark <span class="font-label-md text-label-md text-on-surface font-semibold">38 min ago (3:45 PM)</span>. Don’t worry Leo, all your safety limits continue running on your Galaxy A34.
+    </p>
+<!-- Stale Data Pill -->
+<div class="mt-space-md flex items-center justify-between p-space-sm rounded-lg bg-surface text-on-surface shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Data timestamp: 3:45 PM (Cached)</span>
+</div>
+<button class="h-10 px-space-md bg-secondary text-on-secondary rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-transform active:scale-95 shadow-sm" id="retry-sync-btn" onclick="triggerSyncCheck()">
+<span class="material-symbols-outlined text-[16px]" id="sync-icon">sync</span>
+<span>Check Now</span>
+</button>
+</div>
+</section>
+<!-- What Still Works Right Now (Matrix) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h2 class="font-title-md text-title-md text-on-surface">What still works right now</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Protected</span>
+</div>
+<!-- Rule Card 1: Local Timers & Schedule -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Local Screen Timers & Bedtime</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Stored on-device • Runs without internet</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-status-enforced/15 text-status-enforced font-semibold">Enforced</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface shadow-sm flex items-center justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Remaining for Today</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">45 min</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Bedtime Downtime</span>
+<span class="font-title-sm text-title-sm text-on-surface">8:30 PM Tonight</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Your daily 2h 30m limit and bedtime schedule are securely anchored inside the phone's internal storage and will close apps when time runs out.
+      </p>
+</div>
+<!-- Rule Card 2: Offline Allowed Apps -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">apps</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Offline-Ready Apps Available</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Playable & accessible right now</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2 p-space-sm bg-surface rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">translate</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Duolingo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">Offline pack</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-space-sm bg-surface rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">sports_esports</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Minecraft</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">Singleplayer worlds</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-space-sm bg-surface rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_camera</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Camera & Sketch</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">Drawing mode</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-space-sm bg-surface rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">calculate</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Calculator</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">Tools active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rule Card 3: Offline Emergency SOS -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">emergency</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Emergency SOS (Always Ready)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Bypasses data via SMS Cellular towers</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-status-enforced/15 text-status-enforced font-semibold">Active</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Even without internet or data balance, your emergency button routes directly through carrier cell signals to Sarah and Mark as an urgent priority SMS beacon.
+      </p>
+<button class="w-full h-12 bg-status-failed text-on-error rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-95" id="sos-test-button" onclick="openSosModal()">
+<span class="material-symbols-outlined text-[20px]">crisis_alert</span>
+<span>Local SOS Siren & Carrier Alert</span>
+</button>
+</div>
+</section>
+<!-- Pending Sync Queue -->
+<section class="bg-surface-container rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">cloud_queue</span>
+<h2 class="font-title-md text-title-md text-on-surface">Sync Queue (2 pending)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-sends on Wi-Fi</span>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-status-pending text-[20px]">more_time</span>
+<div class="min-w-0">
+<p class="font-title-sm text-title-sm text-on-surface truncate">+15m Minecraft Request</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Created at 4:18 PM • Waiting for network</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-status-pending/15 text-status-pending font-semibold flex-shrink-0">Pending</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">military_tech</span>
+<div class="min-w-0">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Math Homework +15 Trust Points</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Earned offline • Stored locally</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold flex-shrink-0">Saved</span>
+</div>
+</div>
+</section>
+<!-- Leo's Quick Troubleshooting Steps -->
+<section class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">lightbulb</span>
+<h2 class="font-title-md text-title-md text-on-surface">Quick Connection Guide</h2>
+</div>
+<div class="space-y-space-sm">
+<!-- Step 1 -->
+<div class="flex items-start gap-3 p-space-sm rounded-lg bg-surface shadow-sm">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md flex items-center justify-center flex-shrink-0 font-bold">1</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Check Wi-Fi in Quick Settings</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Swipe down from the top of your screen to ensure the Wi-Fi icon is turned ON.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3 p-space-sm rounded-lg bg-surface shadow-sm">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md flex items-center justify-center flex-shrink-0 font-bold">2</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Make sure Airplane Mode is OFF</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Look for the small airplane symbol in your status bar. If it is active, tap to turn off.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3 p-space-sm rounded-lg bg-surface shadow-sm">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md flex items-center justify-center flex-shrink-0 font-bold">3</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">School Wi-Fi Network</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">At Oakridge Middle School, connect to the approved student network <span class="font-semibold text-on-surface">"Oakridge-Student-Wi-Fi"</span>.</p>
+</div>
+</div>
+</div>
+<button class="w-full h-12 bg-surface text-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-95" onclick="handleOpenSettings()">
+<span class="material-symbols-outlined text-[20px]">settings_ethernet</span>
+<span>Open Phone Wi-Fi Settings</span>
+</button>
+</section>
+<!-- Voice Call Carrier Fallback -->
+<section class="bg-surface-container rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">phone_in_talk</span>
+<h2 class="font-title-md text-title-md text-on-surface">Need to talk to parents right now?</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Standard phone calls use regular cellular frequencies and work without mobile internet.
+    </p>
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="h-12 bg-secondary text-on-secondary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform text-center" href="tel:5550192831">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="truncate">Call Mom</span>
+</a>
+<a class="h-12 bg-secondary text-on-secondary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform text-center" href="tel:5550192832">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="truncate">Call Dad</span>
+</a>
+</div>
+</section>
+<!-- Local SOS Modal Sheet (Overlay) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-end sm:items-center justify-center p-margin" id="sos-modal">
+<div class="w-full max-w-sm bg-surface rounded-xl p-space-lg shadow-xl space-y-space-md text-center">
+<div class="w-14 h-14 mx-auto rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">warning</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Confirm Emergency SOS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          This will trigger a loud emergency siren on your phone and broadcast your last GPS coordinates via carrier SMS directly to Sarah and Mark.
+        </p>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full h-12 bg-status-failed text-on-error rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform" onclick="triggerEmergencyAlert()">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+<span>Send Emergency Alert</span>
+</button>
+<button class="w-full h-12 bg-surface-container text-on-surface rounded-xl font-label-lg text-label-lg active:scale-95 transition-transform" onclick="closeSosModal()">
+          Cancel
+        </button>
+</div>
+</div>
+</div>
+<!-- Reconnect Feedback Toast -->
+<div class="fixed bottom-20 inset-x-margin z-50 p-space-md rounded-xl bg-surface text-on-surface shadow-xl hidden items-center gap-3" id="feedback-toast">
+<span class="material-symbols-outlined text-secondary text-[24px]" id="toast-icon">cloud_sync</span>
+<div class="flex-1">
+<p class="font-title-sm text-title-sm text-on-surface" id="toast-title">Checking signal...</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Testing Wi-Fi and mobile network.</p>
+</div>
+</div>
+</div>
+<script>
+  function triggerSyncCheck() {
+    const icon = document.getElementById('sync-icon');
+    const toast = document.getElementById('feedback-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+
+    if (icon) icon.classList.add('animate-spin');
+    
+    // Show toast
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    toastTitle.textContent = "Scanning connections...";
+    toastDesc.textContent = "Looking for nearby Wi-Fi or cellular radio.";
+    toastIcon.textContent = "sync";
+    toastIcon.classList.add('animate-spin');
+
+    setTimeout(() => {
+      if (icon) icon.classList.remove('animate-spin');
+      toastIcon.classList.remove('animate-spin');
+      toastIcon.textContent = "signal_wifi_bad";
+      toastTitle.textContent = "Still in Offline Mode";
+      toastDesc.textContent = "No active connection found yet. Your device rules remain safe and active.";
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3500);
+    }, 1800);
+  }
+
+  function handleOpenSettings() {
+    const toast = document.getElementById('feedback-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    toastIcon.textContent = "settings";
+    toastTitle.textContent = "Opening Network Settings";
+    toastDesc.textContent = "Check Wi-Fi and school portal settings.";
+
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 2500);
+  }
+
+  function openSosModal() {
+    const modal = document.getElementById('sos-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeSosModal() {
+    const modal = document.getElementById('sos-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function triggerEmergencyAlert() {
+    closeSosModal();
+    const toast = document.getElementById('feedback-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    toastIcon.textContent = "done_all";
+    toastTitle.textContent = "Emergency SMS Dispatched";
+    toastDesc.textContent = "Carrier towers alerted Sarah & Mark with your coordinates.";
+
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 4000);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-status-enforced font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors text-status-enforced font-semibold" data-path="today" href="#"><span class="material-symbols-outlined text-[24px]">schedule</span><span class="font-label-sm text-label-sm mt-0.5">Today</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="requests" href="#"><span class="material-symbols-outlined text-[24px]">add_task</span><span class="font-label-sm text-label-sm mt-0.5">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="chat" href="#"><span class="material-symbols-outlined text-[24px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5">Chat</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="wellbeing" href="#"><span class="material-symbols-outlined text-[24px]">vital_signs</span><span class="font-label-sm text-label-sm mt-0.5">Wellbeing</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="privacy" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-sm text-label-sm mt-0.5">Privacy</span></a></div></nav></body></html>

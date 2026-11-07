@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { width: 100vw; margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+body { min-height: max(884px, 100dvh); }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary-fixed-dim": "#fbbb58",
+        "on-secondary-container": "#00705c",
+        "on-surface": "#131c28",
+        "inverse-on-surface": "#eaf1ff",
+        "on-secondary-fixed": "#002019",
+        "inverse-primary": "#b2c5ff",
+        "surface-dim": "#d1daeb",
+        "tertiary-container": "#795000",
+        "on-tertiary-fixed-variant": "#624000",
+        "on-primary": "#ffffff",
+        "surface-variant": "#F2F4F8",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#1b4293",
+        "surface-container-low": "#eff4ff",
+        "status-failed": "#B42318",
+        "secondary-container": "#94f1d6",
+        "on-surface-variant": "#444651",
+        "surface-container": "#E8ECF2",
+        "status-unsupported": "#5C6470",
+        "on-tertiary-fixed": "#291800",
+        "on-primary-container": "#beceff",
+        "tertiary-fixed": "#ffddb1",
+        "inverse-surface": "#28313d",
+        "on-tertiary-container": "#ffc56f",
+        "secondary-fixed-dim": "#7ad7be",
+        "secondary": "#006b58",
+        "surface-container-highest": "#dae3f4",
+        "on-secondary-fixed-variant": "#005142",
+        "primary-fixed-dim": "#b2c5ff",
+        "background": "#f8f9ff",
+        "status-pending": "#9A6700",
+        "outline-subtle": "#D5DCE5",
+        "on-error": "#ffffff",
+        "on-secondary": "#ffffff",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "status-enforced": "#16816B",
+        "primary-container": "#3154a6",
+        "on-background": "#131c28",
+        "on-tertiary": "#ffffff",
+        "primary-fixed": "#dae2ff",
+        "surface-tint": "#385aad",
+        "tertiary": "#5a3b00",
+        "surface-container-high": "#e0e9f9",
+        "secondary-fixed": "#97f4d9",
+        "outline-variant": "#c4c6d3",
+        "surface": "#FFFFFF",
+        "surface-container-lowest": "#ffffff",
+        "outline": "#747783",
+        "on-primary-fixed": "#001848",
+        "on-error-container": "#93000a",
+        "primary": "#113c8d"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-tablet": "1.5rem",
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "margin-tablet": "1.5rem",
+        "space-xl": "1.5rem",
+        "space-lg": "1rem",
+        "space-sm": "0.5rem",
+        "margin": "1rem"
+      },
+      "fontFamily": {
+        "label-sm": ["Inter"],
+        "headline-sm": ["Roboto Flex"],
+        "title-sm": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-lg-mobile": ["Roboto Flex"],
+        "headline-md": ["Roboto Flex"],
+        "title-md": ["Inter"],
+        "body-md": ["Inter"],
+        "label-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-lg": ["Inter"],
+        "headline-lg": ["Roboto Flex"]
+      },
+      "fontSize": {
+        "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+        "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+        "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+      }
+    }
+  }
+};
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen">
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(22,129,107,0.08)]">
+<div class="h-16 px-margin flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">anchor</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Leo, 11</span>
+<span class="relative flex h-2 w-2 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-enforced opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-status-enforced"></span>
+</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm truncate">
+<span class="truncate">Galaxy A34</span>
+<span>•</span>
+<span class="text-status-enforced font-medium flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>Protected
+          </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-enforced/10 text-status-enforced font-label-sm text-label-sm border border-status-enforced/20 shadow-xs">
+<span class="material-symbols-outlined text-[14px] animate-spin text-status-enforced" style="animation-duration: 6s;">sync</span>
+<span class="hidden sm:inline font-medium">Synced just now • Android 14</span>
+<span class="inline sm:hidden font-medium">Synced now</span>
+</div>
+<button aria-label="Companion Settings" class="w-9 h-9 rounded-full bg-surface-variant text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Dynamic Pill / Notification Toast -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="flex h-3 w-3 relative shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-enforced opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-status-enforced"></span>
+</span>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-status-enforced uppercase tracking-wider font-semibold truncate">Requests &amp; Decisions</p>
+<p class="font-body-sm text-body-sm text-on-surface truncate">2 New Updates from Sarah &amp; Mark</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-enforced shrink-0">mark_email_read</span>
+</div>
+</div>
+<!-- Screen Header Banner -->
+<div class="px-margin pt-space-lg pb-space-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Parent Decision Inbox</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      Transparent decisions from Sarah &amp; Mark on your time extensions and app requests, with honest notes and next steps.
+    </p>
+</div>
+<!-- Weekly Collaborative Trust Health (Bento Stat Bar) -->
+<div class="px-margin py-space-sm">
+<div class="bg-surface rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-status-enforced" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<h2 class="font-title-sm text-title-sm text-on-surface">Weekly Agreement Score</h2>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced bg-status-enforced/10 px-2 py-0.5 rounded-full font-semibold">100% Transparent</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs text-center">
+<div class="bg-surface-variant rounded-xl p-space-sm flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-primary">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sent</span>
+</div>
+<div class="bg-secondary-container/40 rounded-xl p-space-sm flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-status-enforced">7 (88%)</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container">Approved</span>
+</div>
+<div class="bg-surface-variant rounded-xl p-space-sm flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hidden Rules</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-status-enforced shrink-0">verified</span>
+<span>You and your parents have maintained 100% open agreements this week. Great teamwork!</span>
+</p>
+</div>
+</div>
+<!-- Section 1: Latest Decisions -->
+<div class="px-margin pt-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<h2 class="font-title-md text-title-md text-on-surface">Latest Decisions</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 reviewed</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: Approved Extra Time -->
+<article class="bg-surface rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-status-enforced/15 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Minecraft</h3>
+<span class="font-label-sm text-label-sm text-status-enforced font-semibold bg-status-enforced/15 px-2 py-0.5 rounded-full">+15 Mins</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Decided by Sarah (Mom) • 10m ago</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-status-enforced bg-secondary-container/50 px-2.5 py-1 rounded-full font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Approved
+          </span>
+</div>
+<!-- Note Bubble from Parent -->
+<div class="bg-surface-variant rounded-xl p-space-md flex gap-space-sm items-start">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0">
+            S
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm font-semibold text-primary">Sarah Jenkins (Mom)</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-relaxed">
+              “Nice job getting that history worksheet done earlier! Enjoy finishing up the castle with Noah. Clock runs until 4:55 PM.”
+            </p>
+</div>
+</div>
+<!-- Live Session Timer Bar -->
+<div class="bg-status-enforced/10 rounded-xl p-space-sm flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-enforced text-[18px]">timer</span>
+<span class="font-label-sm text-label-sm font-medium">Auto-pauses if you switch out</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-semibold">14m 20s left</span>
+</div>
+<button class="w-full h-12 bg-status-enforced hover:opacity-95 text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>Open Minecraft Now</span>
+</button>
+</article>
+<!-- Card 2: Approved Learning Exemption -->
+<article class="bg-surface rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Duolingo: French</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Decided by Sarah (Mom) • 25m ago</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary bg-primary-fixed px-2.5 py-1 rounded-full font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Learning Exemption
+          </span>
+</div>
+<!-- Note Bubble from Parent -->
+<div class="bg-surface-variant rounded-xl p-space-md flex gap-space-sm items-start">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0">
+            S
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm font-semibold text-primary">Sarah Jenkins (Mom)</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-relaxed">
+              “Categorized as unmetered study time! Good luck on Mme. Laurent’s vocab test tomorrow. Bonne chance!”
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-label-sm text-label-sm text-status-enforced flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px]">download_done</span> Installed &amp; Ready on Home Screen
+          </span>
+<button class="h-10 px-4 rounded-xl bg-surface-variant hover:bg-surface-container text-primary font-label-md text-label-md transition-colors">
+            Launch
+          </button>
+</div>
+</article>
+<!-- Card 3: Paused for Discussion (Gentle, Non-punitive) -->
+<article class="bg-surface rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-status-pending shrink-0">
+<span class="material-symbols-outlined text-[28px]">chat_bubble</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Discord App Install</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Decided by Mark (Dad) • Yesterday 6:15 PM</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-status-pending bg-tertiary-fixed px-2.5 py-1 rounded-full font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">pause_circle</span> Discussion First
+          </span>
+</div>
+<!-- Note Bubble from Dad -->
+<div class="bg-surface-variant rounded-xl p-space-md flex gap-space-sm items-start">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm flex items-center justify-center shrink-0">
+            M
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm font-semibold text-tertiary-container">Mark Jenkins (Dad)</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-relaxed">
+              “Discord has an age 13+ community policy. Let’s talk about setting up an invite-only server together during our Sunday family check-in!”
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-12 bg-surface-variant hover:bg-surface-container text-on-surface font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 transition-colors" id="agenda-btn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">calendar_add_on</span>
+<span id="agenda-label">Add to Sunday Chat Agenda</span>
+</button>
+<a class="w-12 h-12 rounded-xl bg-surface-variant hover:bg-surface-container flex items-center justify-center text-primary shrink-0 transition-colors" data-path="c-09-family-chat" href="#" title="Message Dad">
+<span class="material-symbols-outlined text-[20px]">reply</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+<!-- Section 2: Pending Requests -->
+<div class="px-margin pt-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-pending text-[20px]">hourglass_top</span>
+<h2 class="font-title-md text-title-md text-on-surface">Awaiting Review</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 pending</span>
+</div>
+<div class="bg-surface rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-variant flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">token</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Roblox</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed px-2 py-0.5 rounded-full">+30 Mins</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sent 15m ago (4:35 PM)</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-status-pending bg-tertiary-fixed px-2.5 py-1 rounded-full font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span> Pending
+        </span>
+</div>
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col gap-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Your reason:</p>
+<p class="font-body-sm text-body-sm text-on-surface italic">“Trading pets with cousin Ethan before dinner.”</p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-status-pending">schedule</span>
+<span>Mom usually responds in &lt;5 min. Feel free to ping or ask gently.</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-surface-variant hover:bg-surface-container text-on-surface-variant hover:text-error font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 transition-colors" id="withdraw-btn">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+<span id="withdraw-label">Withdraw Request</span>
+</button>
+<a class="h-12 px-4 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-transform active:scale-[0.98]" data-path="c-09-family-chat" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Nudge</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Collaborative Rule Reminder & Feedback Banner -->
+<div class="px-margin pt-space-lg">
+<div class="bg-surface-container-low rounded-2xl p-space-lg flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-title-sm text-title-sm text-on-surface">Have questions about any decision?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Tap <a class="text-primary font-semibold underline underline-offset-2" data-path="c-09-family-chat" href="#">Family Chat</a> to talk through decisions with Sarah &amp; Mark anytime, or propose a weekend schedule change.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for child inbox buttons
+  const agendaBtn = document.getElementById('agenda-btn');
+  const agendaLabel = document.getElementById('agenda-label');
+  if (agendaBtn && agendaLabel) {
+    agendaBtn.addEventListener('click', () => {
+      agendaBtn.classList.remove('bg-surface-variant', 'text-on-surface');
+      agendaBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      agendaLabel.textContent = 'Added to Sunday Agenda ✓';
+    });
+  }
+
+  const withdrawBtn = document.getElementById('withdraw-btn');
+  const withdrawLabel = document.getElementById('withdraw-label');
+  if (withdrawBtn && withdrawLabel) {
+    withdrawBtn.addEventListener('click', () => {
+      if (confirm('Cancel this 30-minute Roblox request?')) {
+        withdrawBtn.disabled = true;
+        withdrawLabel.textContent = 'Request Withdrawn';
+        withdrawBtn.parentElement.parentElement.style.opacity = '0.5';
+      }
+    });
+  }
+</script></main>
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_14px_rgba(19,28,40,0.06)]" data-active-classes="text-status-enforced font-semibold">
+<div class="flex justify-around items-center h-16 px-space-xs">
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-status-enforced transition-colors" data-path="c-03-today-screen-time" href="#">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+<span class="font-label-sm text-label-sm">Today</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-status-enforced font-semibold" data-path="c-06-request-extra-time" href="#">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span class="font-label-sm text-label-sm">Requests</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-status-enforced transition-colors" data-path="c-09-family-chat" href="#">
+<span class="material-symbols-outlined text-[22px]">forum</span>
+<span class="font-label-sm text-label-sm">Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-status-enforced transition-colors" data-path="c-10-my-activity" href="#">
+<span class="material-symbols-outlined text-[22px]">insights</span>
+<span class="font-label-sm text-label-sm">Wellbeing</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-status-enforced transition-colors" data-path="c-11-privacy-sharing-dashboard" href="#">
+<span class="material-symbols-outlined text-[22px]">shield_lock</span>
+<span class="font-label-sm text-label-sm">Privacy</span>
+</a>
+</div>
+</nav>
+</body></html>

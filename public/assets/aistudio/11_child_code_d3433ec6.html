@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#fbbb58", "on-secondary-container": "#00705c", "on-surface": "#131c28", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#002019", "inverse-primary": "#b2c5ff", "surface-dim": "#d1daeb", "tertiary-container": "#795000", "on-tertiary-fixed-variant": "#624000", "on-primary": "#ffffff", "surface-variant": "#dae3f4", "error-container": "#ffdad6", "on-primary-fixed-variant": "#1b4293", "surface-container-low": "#eff4ff", "status-failed": "#B42318", "secondary-container": "#94f1d6", "on-surface-variant": "#444651", "surface-container": "#E8ECF2", "status-unsupported": "#5C6470", "on-tertiary-fixed": "#291800", "on-primary-container": "#beceff", "tertiary-fixed": "#ffddb1", "inverse-surface": "#28313d", "on-tertiary-container": "#ffc56f", "secondary-fixed-dim": "#7ad7be", "secondary": "#006b58", "surface-container-highest": "#dae3f4", "on-secondary-fixed-variant": "#005142", "primary-fixed-dim": "#b2c5ff", "background": "#f8f9ff", "status-pending": "#9A6700", "outline-subtle": "#D5DCE5", "on-error": "#ffffff", "on-secondary": "#ffffff", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "status-enforced": "#16816B", "primary-container": "#3154a6", "on-background": "#131c28", "on-tertiary": "#ffffff", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "tertiary": "#5a3b00", "surface-container-high": "#e0e9f9", "secondary-fixed": "#97f4d9", "outline-variant": "#c4c6d3", "surface": "#FFFFFF", "surface-container-lowest": "#ffffff", "outline": "#747783", "on-primary-fixed": "#001848", "on-error-container": "#93000a", "primary": "#113c8d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "headline-sm": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "body-lg": ["Inter"], "title-sm": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "headline-md": ["Roboto Flex"], "label-lg": ["Inter"], "headline-lg": ["Roboto Flex"], "label-sm": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-xl bg-status-enforced/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-status-enforced text-[22px]">anchor</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface truncate">Leo, 11</span><span class="relative flex h-2 w-2 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-enforced opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-status-enforced"></span></span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm truncate"><span class="truncate">Galaxy A34</span><span>•</span><span class="text-status-enforced font-medium flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">verified_user</span>Protected</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-status-enforced/15 text-status-enforced flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">sync</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin space-y-space-lg pb-space-xl">
+<!-- Friendly Reassurance Hero Banner -->
+<div class="relative overflow-hidden rounded-xl bg-secondary-container p-space-lg text-on-secondary-container shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-status-enforced text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-secondary-container">Your Privacy &amp; Trust</span>
+<p class="font-body-md text-body-md mt-space-xs text-on-secondary-container/90 leading-snug">
+          Safety works best when everyone is open. Here is exactly what is shared with Sarah &amp; Mark, and what stays strictly yours.
+        </p>
+</div>
+</div>
+<!-- Child Quick Device Badge -->
+<div class="mt-space-md pt-space-md flex flex-wrap items-center justify-between gap-space-sm bg-surface/60 rounded-lg p-space-sm backdrop-blur-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Galaxy A34 Protected</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-status-enforced animate-pulse"></span>
+<span>Synced 2 min ago</span>
+</div>
+</div>
+</div>
+<!-- Interactive Transparency Matrix: Tab switcher -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Transparency Matrix</h2>
+<span class="font-label-sm text-label-sm text-status-enforced bg-status-enforced/10 px-space-sm py-1 rounded-full font-medium">Family Pact v2.1</span>
+</div>
+<!-- View Selector Segmented Control -->
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl gap-1" id="matrixSelector">
+<button class="flex items-center justify-center gap-space-xs h-12 rounded-lg bg-surface text-status-enforced shadow-sm font-label-lg text-label-lg transition-all" id="btnCanSee" onclick="showMatrix('canSee')">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<span>What Parents See</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs h-12 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all" id="btnNeverSee" onclick="showMatrix('neverSee')">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Strictly Private</span>
+</button>
+</div>
+<!-- Section A: What Parents CAN See -->
+<div class="flex flex-col space-y-space-sm transition-all duration-200" id="sectionCanSee">
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[20px]">handshake</span>
+<span class="font-title-sm text-title-sm text-on-surface">What Sarah &amp; Mark CAN See</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">5 Active Items</span>
+</div>
+<!-- Matrix Item 1 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">timelapse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Daily Screen Time Totals</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Categories like "Learning" or "Games". Current tally today: <strong class="text-on-surface">2h 15m</strong> of 3h allowed.
+            </p>
+</div>
+</div>
+<!-- Matrix Item 2 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Safe Arrival Check-Ins</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              School zone alerts (e.g., Oakridge Middle School) and live device location when traveling.
+            </p>
+</div>
+</div>
+<!-- Matrix Item 3 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">battery_charging_full</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Device Health &amp; Battery</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Battery percentage (<strong class="text-status-enforced">78%</strong>) and Wi-Fi connectivity so they know your phone is reachable.
+            </p>
+</div>
+</div>
+<!-- Matrix Item 4 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">schedule_send</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Your Extra Time Requests</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Bonus minute requests you send from the Requests tab with your optional notes.
+            </p>
+</div>
+</div>
+<!-- Matrix Item 5 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">screen_share</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Live Screen Checks (Consent Required)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Parents can <strong class="text-on-surface">never peek silently</strong>. You always see a full-screen alert and must tap "Allow".
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section B: What Parents CAN NEVER See -->
+<div class="hidden flex flex-col space-y-space-sm transition-all duration-200" id="sectionNeverSee">
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-failed text-[20px]">verified_user</span>
+<span class="font-title-sm text-title-sm text-on-surface">What Parents CAN NEVER See</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-failed bg-error-container/60 px-space-sm py-1 rounded-full font-medium">Guaranteed Private</span>
+</div>
+<!-- Guard Item 1 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-status-failed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Private Chats &amp; DMs</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              WhatsApp, Discord, iMessage, and SMS conversations cannot be read or stored by Anchor.
+            </p>
+</div>
+</div>
+<!-- Guard Item 2 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-status-failed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">keyboard</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Keylogging &amp; Passwords</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              What you type is encrypted directly by your Android keyboard. Zero keystrokes recorded.
+            </p>
+</div>
+</div>
+<!-- Guard Item 3 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-status-failed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Personal Photos &amp; Camera Roll</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Your gallery, selfies, and saved downloads remain strictly stored in your local storage.
+            </p>
+</div>
+</div>
+<!-- Guard Item 4 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-status-failed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">mic_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Microphone or Camera Audio</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              No covert ambient listening or cameras. Android's green privacy indicator always warns you if sensors run.
+            </p>
+</div>
+</div>
+<!-- Guard Item 5 -->
+<div class="bg-surface rounded-lg p-space-md flex items-start gap-space-md shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-status-failed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">travel_explore</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface">Incognito History &amp; Browsing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Only blocked adult categories get filtered. General browsing queries are never packaged into a search log.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Device Sensors & OS Permissions Card -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Active Android Permissions</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">OS Level 14</span>
+</div>
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col space-y-space-sm">
+<!-- Sensor 1: Accessibility -->
+<div class="bg-surface rounded-lg p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[20px]">accessibility_new</span>
+<span class="font-title-sm text-title-sm text-on-surface">Accessibility Service</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced bg-status-enforced/10 px-2.5 py-0.5 rounded-full font-medium">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Measures open app windows to pause Minecraft or YouTube when bedtime strikes.
+        </p>
+<button class="w-fit text-left font-label-sm text-label-sm text-primary hover:text-primary-container pt-1 min-h-[36px] flex items-center gap-1 font-semibold" onclick="alert('Accessibility gives Anchor permission to read foreground app names so app timers can pause play respectfully. It cannot read screen text or messages.')">
+          Learn why this is needed <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- Sensor 2: Location -->
+<div class="bg-surface rounded-lg p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[20px]">my_location</span>
+<span class="font-title-sm text-title-sm text-on-surface">Location Sensor</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced bg-status-enforced/10 px-2.5 py-0.5 rounded-full font-medium">Geofence Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Notifies Sarah when you make it safely to school or rugby practice without constant tracking.
+        </p>
+<button class="w-fit text-left font-label-sm text-label-sm text-primary hover:text-primary-container pt-1 min-h-[36px] flex items-center gap-1 font-semibold" onclick="alert('Location runs strictly when leaving or entering agreed areas like school or home to preserve your battery and ensure safety.')">
+          Learn why this is needed <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- Sensor 3: Device Admin -->
+<div class="bg-surface rounded-lg p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[20px]">security_update_good</span>
+<span class="font-title-sm text-title-sm text-on-surface">Device Administrator</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced bg-status-enforced/10 px-2.5 py-0.5 rounded-full font-medium">Enforced</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Prevents accidental uninstall and keeps SOS emergency buttons active if your phone is lost.
+        </p>
+<button class="w-fit text-left font-label-sm text-label-sm text-primary hover:text-primary-container pt-1 min-h-[36px] flex items-center gap-1 font-semibold" onclick="alert('Device Admin policy stops third-party apps or accidental taps from disabling safety rules without a shared family passcode.')">
+          Learn why this is needed <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Shared Safety Timeline / Audit Log -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h2 class="font-title-md text-title-md text-on-surface">Your Shared Safety Timeline</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last 24 Hours</span>
+</div>
+<div class="bg-surface-variant rounded-xl p-space-md flex flex-col space-y-space-md">
+<!-- Event 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface">Live check requested by Sarah</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">4:32 PM</span>
+</div>
+<span class="font-body-sm text-body-sm text-status-enforced font-medium mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Approved by you on device
+          </span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30 w-full ml-10"></div>
+<!-- Event 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-enforced/15 text-status-enforced flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface">Arrived at Oakridge Middle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">8:15 AM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Geofence ping sent to Mark &amp; Sarah
+          </span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30 w-full ml-10"></div>
+<!-- Event 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">add_alarm</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface">+15m Minecraft requested</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">Yesterday</span>
+</div>
+<span class="font-body-sm text-body-sm text-status-enforced font-medium mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Approved by Sarah (7:15 PM)
+          </span>
+</div>
+</div>
+<!-- Export Log Action Button -->
+<div class="pt-space-xs">
+<button class="w-full h-12 bg-surface hover:bg-surface-container rounded-lg flex items-center justify-center gap-space-xs text-primary font-label-lg text-label-lg shadow-sm transition-all" onclick="handleExportLog()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export My Privacy Log (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Collaborative Feedback & Family Pact Card -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col space-y-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-status-enforced/20 text-status-enforced flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface">Talk with Sarah about house rules</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Think you need more screen time for homework or a club? Rules are meant to be discussed together, not set in stone.
+        </p>
+</div>
+</div>
+<!-- Sunday Check-in Pill -->
+<div class="flex items-center justify-between bg-surface rounded-lg p-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-pending text-[18px]">event</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Next Family Review: Sunday, 6:00 PM</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">In 2 days</span>
+</div>
+<button class="w-full h-12 rounded-xl bg-status-enforced text-on-primary flex items-center justify-center gap-space-xs font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" onclick="handleSuggestTopic()">
+<span class="material-symbols-outlined text-[20px]">add_comment</span>
+<span>Suggest a Topic for Sunday</span>
+</button>
+</div>
+</div>
+<script>
+  function showMatrix(target) {
+    const secCanSee = document.getElementById('sectionCanSee');
+    const secNeverSee = document.getElementById('sectionNeverSee');
+    const btnCan = document.getElementById('btnCanSee');
+    const btnNever = document.getElementById('btnNeverSee');
+
+    if (target === 'canSee') {
+      secCanSee.classList.remove('hidden');
+      secNeverSee.classList.add('hidden');
+      
+      btnCan.className = "flex items-center justify-center gap-space-xs h-12 rounded-lg bg-surface text-status-enforced shadow-sm font-label-lg text-label-lg transition-all";
+      btnNever.className = "flex items-center justify-center gap-space-xs h-12 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all";
+    } else {
+      secNeverSee.classList.remove('hidden');
+      secCanSee.classList.add('hidden');
+
+      btnNever.className = "flex items-center justify-center gap-space-xs h-12 rounded-lg bg-surface text-status-failed shadow-sm font-label-lg text-label-lg transition-all";
+      btnCan.className = "flex items-center justify-center gap-space-xs h-12 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all";
+    }
+  }
+
+  function handleExportLog() {
+    alert("Generating encrypted child privacy report for Leo Jenkins... Downloading PDF log.");
+  }
+
+  function handleSuggestTopic() {
+    const topic = prompt("What would you like to discuss with Sarah & Mark at the Sunday check-in? (e.g., Minecraft weekend extension)");
+    if (topic && topic.trim() !== "") {
+      alert("Added '" + topic + "' to Sunday Family Agenda! Sarah and Mark have been notified.");
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,28,40,0.05)]" data-active-classes="text-status-enforced font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-status-enforced font-semibold" data-path="c-03-today-screen-time" href="#"><span class="material-symbols-outlined text-[22px]">schedule</span><span class="font-label-sm text-label-sm">Today</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="c-06-request-extra-time" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="c-08-sos-emergency-check-in" href="#"><span class="material-symbols-outlined text-[22px]">emergency</span><span class="font-label-sm text-label-sm">Safety</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="family-collaborate" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm">Family</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-sharing" href="#"><span class="material-symbols-outlined text-[22px]">lock</span><span class="font-label-sm text-label-sm">Privacy</span></a></div></nav></body></html>

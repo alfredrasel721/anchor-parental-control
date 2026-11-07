@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#FFFFFF;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#b2c5ff", "on-secondary": "#ffffff", "on-surface": "#131c28", "outline": "#747783", "status-pending": "#9A6700", "on-primary-fixed-variant": "#1b4293", "surface-variant": "#dae3f4", "background": "#f8f9ff", "secondary-fixed": "#97f4d9", "inverse-primary": "#b2c5ff", "secondary-fixed-dim": "#7ad7be", "inverse-surface": "#28313d", "on-secondary-container": "#00705c", "on-tertiary-fixed": "#291800", "surface-container-highest": "#dae3f4", "error": "#ba1a1a", "status-unsupported": "#5C6470", "surface-bright": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary": "#006b58", "on-primary-fixed": "#001848", "secondary-container": "#94f1d6", "primary-container": "#3154a6", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "on-tertiary-fixed-variant": "#624000", "status-failed": "#B42318", "on-tertiary": "#ffffff", "tertiary": "#5a3b00", "surface-container-low": "#eff4ff", "outline-variant": "#c4c6d3", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "status-enforced": "#16816B", "on-secondary-fixed": "#002019", "tertiary-fixed": "#ffddb1", "on-error": "#ffffff", "surface-dim": "#d1daeb", "surface": "#FFFFFF", "tertiary-fixed-dim": "#fbbb58", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-background": "#131c28", "outline-subtle": "#D5DCE5", "surface-container": "#e5eeff", "tertiary-container": "#795000", "on-surface-variant": "#444651", "surface-container-high": "#e0e9f9", "on-primary-container": "#beceff", "primary": "#113c8d", "on-tertiary-container": "#ffc56f", "on-secondary-fixed-variant": "#005142" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-lg": "1rem", "space-xl": "1.5rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "label-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "title-md": ["Inter"], "title-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Roboto Flex"], "body-md": ["Inter"], "headline-lg": ["Roboto Flex"] }, "fontSize": { "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "500"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-6 px-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm select-none"><span class="font-label-md text-label-md text-on-surface font-semibold">9:41</span><div class="flex items-center gap-1.5"><span class="text-[11px] font-semibold tracking-tighter">5G</span><span class="material-symbols-outlined text-[16px]">wifi</span><span class="material-symbols-outlined text-[18px]">battery_full</span></div></div><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2.5 min-w-0"><img alt="Anchor Parent Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDy6QVBRnr3XO9CegfwGaBRJQo_zNHgfuV0Sdknp2MkMvKEaWbKw9KPldxokPfFLtqvGBKZ6gA8pT1Rltw-vZK_4G0d8YRMXsJsJSY70sjf7xBW4_GmZKfFa7CVWF0wA7BMS8h3N5crF1jLdJvXevixP8EvTITx58UnyEMf1XK9ymz-nUmSxOwCmIcd7JZTjdokwRpEdvEWRgfGPRXoiqcMI-wxas0pX_oM43x84qg"/><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface truncate">Anchor Parent</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">App Usage And Limits</span></div></div><div class="flex items-center gap-2"><button class="min-h-[44px] px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 transition-colors" type="button"><span class="w-2 h-2 rounded-full bg-status-enforced"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Family (2)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FS5umrR2WoScL2OVZtL8Bv6wPauaXgjFhCTjtFkcA7qkDFvDFRH40fKNcwh-Xmkzd8IeaoxQxekbnMEFZrpLQmmrI-YreKZ-SMwc6lsyQJ3z_3CcqPVtv5-8Mg8beWOubN2kmr6-U3z2WuqCOWyqDCOdftmFE99ZaVqEs5UJDPrEItjkRcrNN0lyQ0dJe_f8S3ZqSX8YfGbOFh9UMkYvVyGxJfOFIsc5Pm_-3FYG"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-28"><div class="flex flex-col w-full">
+<!-- Interactive & Dynamic State Script -->
+<script>
+    function switchTab(tabId) {
+      const tabs = ['categories', 'individual', 'downtime'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-btn-' + t);
+        const panel = document.getElementById('panel-' + t);
+        if (t === tabId) {
+          btn.className = "flex-1 py-2 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm text-center";
+          if (panel) panel.classList.remove('hidden');
+        } else {
+          btn.className = "flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center";
+          if (panel) panel.classList.add('hidden');
+        }
+      });
+    }
+
+    function adjustTime(deltaMinutes) {
+      const display = document.getElementById('slider-time-val');
+      const hiddenInput = document.getElementById('daily-limit-input');
+      let currentTotal = parseInt(hiddenInput.value, 10) + deltaMinutes;
+      if (currentTotal < 60) currentTotal = 60;
+      if (currentTotal > 480) currentTotal = 480;
+      hiddenInput.value = currentTotal;
+      const h = Math.floor(currentTotal / 60);
+      const m = currentTotal % 60;
+      display.innerText = `${h}h ${m > 0 ? m + 'm' : '00m'} / day`;
+      
+      const badge = document.getElementById('pending-sync-toast');
+      if (badge) {
+        badge.classList.remove('opacity-0', 'pointer-events-none');
+        badge.classList.add('opacity-100');
+        setTimeout(() => {
+          badge.classList.add('opacity-0', 'pointer-events-none');
+          badge.classList.remove('opacity-100');
+        }, 3200);
+      }
+    }
+
+    function toggleApp(toggleId, chipId) {
+      const toggle = document.getElementById(toggleId);
+      const chip = document.getElementById(chipId);
+      const dot = toggle.querySelector('.toggle-dot');
+      const isChecked = toggle.getAttribute('data-checked') === 'true';
+      
+      if (isChecked) {
+        toggle.setAttribute('data-checked', 'false');
+        toggle.classList.remove('bg-primary');
+        toggle.classList.add('bg-outline-variant');
+        dot.classList.remove('translate-x-4');
+        dot.classList.add('translate-x-0');
+        if (chip) {
+          chip.innerText = 'Off';
+          chip.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium';
+        }
+      } else {
+        toggle.setAttribute('data-checked', 'true');
+        toggle.classList.add('bg-primary');
+        toggle.classList.remove('bg-outline-variant');
+        dot.classList.add('translate-x-4');
+        dot.classList.remove('translate-x-0');
+        if (chip) {
+          chip.innerText = 'Enforced';
+          chip.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold';
+        }
+      }
+    }
+  </script>
+<!-- Ambient Sync Status Notification -->
+<div class="fixed top-20 left-4 right-4 z-40 transition-opacity duration-300 opacity-0 pointer-events-none flex items-center justify-between p-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="pending-sync-toast">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim animate-spin">sync</span>
+<span class="font-body-sm text-body-sm font-medium">Pushing updated schedule to Galaxy A34...</span>
+</div>
+<span class="font-label-sm text-label-sm text-surface-variant font-semibold">Pending</span>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<!-- Child Context & Sync Status Hero Bar -->
+<section class="flex flex-col gap-3 rounded-2xl bg-surface-container-low p-4 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm" data-alt="Warm natural portrait photograph of a 10 year old boy named Leo smiling calmly outdoors with soft sunshine, wearing a navy denim jacket, warm natural lighting, candid and friendly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB10GyeNFYIwDiY2gXlvksHTcQj1p5Y-VsLiymJd9uryP4KyQNk4xEVCiUc3UVXdsr5T8V6V9kEthOhBHlGKeRvh9I5_xjOVFkt9yL7p4zdMYKQUHXg3837Qx4qDUl4P1J6-VUhDlD2NGSMwFKd616rpu79YKIx4fQE4ViGuHc9YK1q5SzeB3lBZpdHkGa9D7GJZfUF9Pp6ZMKmFBFaKkiBNAL5RIG3KmILYH-GhI_M"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-status-enforced border-2 border-surface"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<h1 class="font-title-md text-title-md text-on-surface truncate">Leo's Device Limits</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Samsung Galaxy A34</span>
+</div>
+</div>
+<!-- Sync Chip Status -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+<span>Enforced • 2m ago</span>
+</div>
+</div>
+<!-- Quick Context Micro-stats -->
+<div class="flex items-center justify-between pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-enforced">verified_user</span>
+<span>Parental Agent v3.4 Active</span>
+</div>
+<button class="flex items-center gap-1 text-primary hover:underline font-label-sm text-label-sm font-semibold" onclick="adjustTime(0)" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Sync Now</span>
+</button>
+</div>
+</section>
+<!-- Navigation Segmented Tabs -->
+<nav class="flex p-1 rounded-full bg-surface-container-high shadow-inner">
+<button class="flex-1 py-2 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm text-center" id="tab-btn-categories" onclick="switchTab('categories')">
+        App Categories
+      </button>
+<button class="flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" id="tab-btn-individual" onclick="switchTab('individual')">
+        Individual Apps
+      </button>
+<button class="flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" id="tab-btn-downtime" onclick="switchTab('downtime')">
+        Downtime Schedule
+      </button>
+</nav>
+<!-- TAB 1: App Categories (Default active) -->
+<div class="flex flex-col gap-4" id="panel-categories">
+<!-- Overall Daily Screen Time Limit Card -->
+<section class="flex flex-col gap-4 rounded-2xl bg-surface p-4 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">schedule</span>
+<h2 class="font-title-md text-title-md text-on-surface">Daily Screen Allowance</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">
+            Active
+          </span>
+</div>
+<!-- Limit Interactive Display & Stepper -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-3 rounded-xl shadow-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Combined daily cap</span>
+<input id="daily-limit-input" type="hidden" value="210"/>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="slider-time-val">3h 30m / day</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-high rounded-full p-1">
+<button aria-label="Decrease time by 15 minutes" class="w-9 h-9 rounded-full bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform shadow-xs" onclick="adjustTime(-15)" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button aria-label="Increase time by 15 minutes" class="w-9 h-9 rounded-full bg-primary hover:bg-primary-container flex items-center justify-center text-on-primary active:scale-95 transition-transform shadow-xs" onclick="adjustTime(15)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Visual Multi-segment Progress Bar -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>Today's Accumulated Usage</span>
+<span class="font-semibold text-on-surface">2h 15m of 3h 30m</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden flex">
+<!-- Games: 70m / 210m = 33.3% -->
+<div class="bg-primary h-full transition-all duration-300" style="width: 33.3%;" title="Games: 1h 10m"></div>
+<!-- Education: 45m / 210m = 21.4% -->
+<div class="bg-secondary h-full transition-all duration-300" style="width: 21.4%;" title="Education: 45m"></div>
+<!-- Social: 20m / 210m = 9.5% -->
+<div class="bg-tertiary-container h-full transition-all duration-300" style="width: 9.5%;" title="Social: 20m"></div>
+<!-- Utilities: 0m -->
+<div class="bg-surface-container-highest h-full" style="width: 35.8%;"></div>
+</div>
+<!-- Color Key Legends -->
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0"></span>
+<span class="text-on-surface truncate">Games (1h 10m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="text-on-surface truncate">Education (45m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container flex-shrink-0"></span>
+<span class="text-on-surface truncate">Social (20m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant flex-shrink-0"></span>
+<span class="text-on-surface-variant truncate">Utilities (0m used)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Card 1: Games & Entertainment -->
+<section class="flex flex-col gap-3 rounded-2xl bg-surface p-4 shadow-md">
+<!-- Category Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">sports_esports</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Games &amp; Entertainment</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1h 30m combined daily cap</span>
+</div>
+</div>
+<!-- Status Badge: Enforced -->
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+            Enforced
+          </span>
+</div>
+<!-- Sub-items: Individual Apps inside Category -->
+<div class="flex flex-col gap-2 pt-2">
+<!-- Item 1: Roblox -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-9 h-9 rounded-xl object-cover shadow-xs flex-shrink-0" data-alt="Icon graphics for an isometric 3D video game app, modern minimal avatar block logo in red and charcoal, clean app icon design, soft shadow on neutral ground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wc8uLTL8BMD9d40D4pnQeZdVGv1-SUXp8qx3tWqpV4OG6AWAfvNhI3l5aQyZn_NVUhZEXoQe4QDJayitd2AtLXQtIQyUZOeGIluKTm1ZvB-xRLrLOBMnHZeqB_8tiEQZWmx4txH7CN4U7-B_S_RkKOGHl7VT7vKrRmocZn-Hd-BShk4Rd4_Gb6Y5SdFCEHIt5rmxihrQtp2XocSYM_MFw4Ueb5EKzZtP1KSC285p"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Roblox</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold" id="chip-roblox">Enforced</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">45m limit set • 32m left</span>
+</div>
+</div>
+<!-- Accessible Toggle -->
+<button aria-label="Toggle Roblox rule" class="w-11 h-6 rounded-full bg-primary p-0.5 transition-colors flex items-center focus:outline-none flex-shrink-0" data-checked="true" id="toggle-roblox" onclick="toggleApp('toggle-roblox', 'chip-roblox')" type="button">
+<div class="toggle-dot w-5 h-5 rounded-full bg-surface shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+<!-- Item 2: Minecraft (Pending state demonstration) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-9 h-9 rounded-xl object-cover shadow-xs flex-shrink-0" data-alt="Icon graphics for a sandbox block building video game app, green pixelated earth grass block illustration on isometric angle, clean vector logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqhd_JI_7iP0-qAR4E2s5YCtzrKF2Y8oAWw7eATQRjA6zV0vgh5PTPf7qU8kXdmoQ5w8Rq3anXwPD6g8ltpOnbv_He0bW2A_YwQ0iHwUFQLshs8-Jeeu6TIj-sncEEY0u3oswDk5WC_0tB1FZMYm9A7i1VPqOXq1ZdlT14PKp6xvvAiYiMNB-3HQRPxL2GmWDmvKCyCyGM6U2B3dS5-9OlNhUBOERDjMtKgUnRuqBX"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Minecraft</span>
+<!-- Pending Chip with Explainer Tooltip -->
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending animate-pulse"></span>
+                    Pending Sync
+                  </span>
+</div>
+<span class="font-body-sm text-body-sm text-status-pending truncate">Syncing changes to device...</span>
+</div>
+</div>
+<!-- Accessible Toggle -->
+<button aria-label="Toggle Minecraft rule" class="w-11 h-6 rounded-full bg-primary p-0.5 transition-colors flex items-center focus:outline-none flex-shrink-0" data-checked="true" id="toggle-minecraft" onclick="toggleApp('toggle-minecraft')" type="button">
+<div class="toggle-dot w-5 h-5 rounded-full bg-surface shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+<!-- Item 3: YouTube Kids -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-9 h-9 rounded-xl object-cover shadow-xs flex-shrink-0" data-alt="Icon graphics for family friendly video player app, bright red play triangle shape inside rounded pebble badge, friendly clean digital art on light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ5MjkA_USKP1qJojY_hcVKMIsevbB1Si1pHmaQQEKt5RcTTKCThiq7-NOM8ALGu0ef6hZmi2mcuZctK9HpKiDLU4OSU_a9RRrH3lV-Gtjg78UEseqNsCbf28U17EwXQFOR9bzdJSK4fPnSc2nqHo3u7wrEzH28tG3Ttv4sVXfW2Fhu6fcLiT-FHoAy7Pg_24-hnA0WWbcxWVVIagPMl8WYy4EtxmbG-y-cKnjG7Dx"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface truncate">YouTube Kids</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Schedule Only</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium truncate">Daylight allowed (7am - 7pm)</span>
+</div>
+</div>
+<!-- Accessible Toggle -->
+<button aria-label="Toggle YouTube Kids rule" class="w-11 h-6 rounded-full bg-primary p-0.5 transition-colors flex items-center focus:outline-none flex-shrink-0" data-checked="true" id="toggle-ytkids" onclick="toggleApp('toggle-ytkids')" type="button">
+<div class="toggle-dot w-5 h-5 rounded-full bg-surface shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Category Card 2: Social & Communication -->
+<section class="flex flex-col gap-3 rounded-2xl bg-surface p-4 shadow-md">
+<!-- Category Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant shadow-xs">
+<span class="material-symbols-outlined text-[22px]">forum</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Social &amp; Communication</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">30m daily cap total</span>
+</div>
+</div>
+<!-- Status Badge: Enforced -->
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+            Enforced
+          </span>
+</div>
+<!-- Sub-items: Apps -->
+<div class="flex flex-col gap-2 pt-2">
+<!-- Item 1: WhatsApp -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center text-on-secondary flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">WhatsApp</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Family contacts only</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Whitelisted</span>
+</div>
+<!-- Item 2: Discord (Blocked state) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface line-through decoration-error truncate">Discord</span>
+<span class="font-body-sm text-body-sm text-status-failed truncate">Installation blocked by rule</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">Blocked</span>
+</div>
+</div>
+</section>
+<!-- Category Card 3: Web & Browsers -->
+<section class="flex flex-col gap-3 rounded-2xl bg-surface p-4 shadow-md">
+<!-- Category Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed-variant shadow-xs">
+<span class="material-symbols-outlined text-[22px]">public</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface">Web &amp; Browsers</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Content filters applied</span>
+</div>
+</div>
+<!-- Status Badge: Enforced -->
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-enforced"></span>
+            Enforced
+          </span>
+</div>
+<!-- Sub-items: Chrome -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">travel_explore</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Google Chrome</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium truncate">SafeSearch locked • Mature sites blocked</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Protected</span>
+</div>
+</section>
+<!-- Transparency Legend & System Health footnote -->
+<section class="flex flex-col gap-2.5 rounded-2xl bg-surface-container-low p-4 shadow-inner">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">info</span>
+<h4 class="font-title-sm text-title-sm">Rule Status Legend</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Anchor Parent utilizes transparent device policies negotiated directly with Knox &amp; Android Management API.
+        </p>
+<div class="grid grid-cols-1 gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex items-start gap-2.5">
+<span class="w-2.5 h-2.5 mt-1 rounded-full bg-status-enforced flex-shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Enforced:</span>
+<span class="text-on-surface-variant"> Verified running on child's operating system with full integrity.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-2.5 h-2.5 mt-1 rounded-full bg-status-pending flex-shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Pending Sync:</span>
+<span class="text-on-surface-variant"> Rule queued; awaiting next heartbeat or Wi-Fi handshake.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-2.5 h-2.5 mt-1 rounded-full bg-status-failed flex-shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Permission Missing:</span>
+<span class="text-on-surface-variant"> Requires re-granting device management access on Leo's phone.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- TAB 2: Individual Apps (Alternative panel for quick toggle) -->
+<div class="hidden flex-col gap-3" id="panel-individual">
+<div class="p-4 rounded-2xl bg-surface shadow-md flex flex-col gap-3">
+<h3 class="font-title-md text-title-md text-on-surface">All Installed Applications (18)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage per-app limits independently from categories.</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[24px] text-primary">school</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Duolingo</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Unlimited • Educational bonus</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Always Allowed</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[24px] text-primary">music_note</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Spotify Kids</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1h daily limit</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Enforced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: Downtime Schedule (Bedtime / Homework mode) -->
+<div class="hidden flex-col gap-3" id="panel-downtime">
+<div class="p-4 rounded-2xl bg-surface shadow-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">bedtime</span>
+<h3 class="font-title-md text-title-md text-on-surface">School Night Downtime</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">8:30 PM - 7:00 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          During downtime, only calling parents and emergency medical apps remain available.
+        </p>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<span class="font-title-sm text-title-sm text-on-surface">Active on Mon, Tue, Wed, Thu, Sun</span>
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Sticky / Bottom Floating Action Container -->
+<div class="sticky bottom-4 w-full pt-2 flex justify-center z-30">
+<button class="w-full max-w-sm h-12 px-6 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg active:scale-98 transition-all" onclick="alert('Rule configuration dialog opened for Leo')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Add App Rule</span>
+</button>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 transition-colors text-primary font-label-md" data-path="app-usage-and-limits" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm mt-0.5">Rules</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="geofences-and-location" href="#"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm mt-0.5">Location</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors relative" data-path="time-requests" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-2 px-1 min-w-[16px] h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] leading-4 text-center font-bold">1</span></div><span class="font-label-sm text-label-sm mt-0.5">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-and-settings" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Family</span></a></div><div class="h-4 flex items-center justify-center pb-1"><div class="w-28 h-1 rounded-full bg-on-surface-variant/30"></div></div></nav></body></html>

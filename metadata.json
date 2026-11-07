@@ -1,0 +1,6 @@
+{
+  "name": "Anchor — Family Safety & Parental Control Platform",
+  "description": "Synchronized Parent and Child Android Parental Control Platform built on Google Stitch designs with Firebase synchronization, transparent family agreements, screen-time management, location safety, and consent-based live safeguards.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

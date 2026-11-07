@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#FFFFFF;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#b2c5ff", "on-secondary": "#ffffff", "on-surface": "#131c28", "outline": "#747783", "status-pending": "#9A6700", "on-primary-fixed-variant": "#1b4293", "surface-variant": "#dae3f4", "background": "#f8f9ff", "secondary-fixed": "#97f4d9", "inverse-primary": "#b2c5ff", "secondary-fixed-dim": "#7ad7be", "inverse-surface": "#28313d", "on-secondary-container": "#00705c", "on-tertiary-fixed": "#291800", "surface-container-highest": "#dae3f4", "error": "#ba1a1a", "status-unsupported": "#5C6470", "surface-bright": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary": "#006b58", "on-primary-fixed": "#001848", "secondary-container": "#94f1d6", "primary-container": "#3154a6", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "on-tertiary-fixed-variant": "#624000", "status-failed": "#B42318", "on-tertiary": "#ffffff", "tertiary": "#5a3b00", "surface-container-low": "#eff4ff", "outline-variant": "#c4c6d3", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "status-enforced": "#16816B", "on-secondary-fixed": "#002019", "tertiary-fixed": "#ffddb1", "on-error": "#ffffff", "surface-dim": "#d1daeb", "surface": "#FFFFFF", "tertiary-fixed-dim": "#fbbb58", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-background": "#131c28", "outline-subtle": "#D5DCE5", "surface-container": "#e5eeff", "tertiary-container": "#795000", "on-surface-variant": "#444651", "surface-container-high": "#e0e9f9", "on-primary-container": "#beceff", "primary": "#113c8d", "on-tertiary-container": "#ffc56f", "on-secondary-fixed-variant": "#005142" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-lg": "1rem", "space-xl": "1.5rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "label-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "title-md": ["Inter"], "title-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Roboto Flex"], "body-md": ["Inter"], "headline-lg": ["Roboto Flex"] }, "fontSize": { "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "500"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-6 px-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm select-none"><span class="font-label-md text-label-md text-on-surface font-semibold">9:41</span><div class="flex items-center gap-1.5"><span class="text-[11px] font-semibold tracking-tighter">5G</span><span class="material-symbols-outlined text-[16px]">wifi</span><span class="material-symbols-outlined text-[18px]">battery_full</span></div></div><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2.5 min-w-0"><img alt="Anchor Parent Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDy6QVBRnr3XO9CegfwGaBRJQo_zNHgfuV0Sdknp2MkMvKEaWbKw9KPldxokPfFLtqvGBKZ6gA8pT1Rltw-vZK_4G0d8YRMXsJsJSY70sjf7xBW4_GmZKfFa7CVWF0wA7BMS8h3N5crF1jLdJvXevixP8EvTITx58UnyEMf1XK9ymz-nUmSxOwCmIcd7JZTjdokwRpEdvEWRgfGPRXoiqcMI-wxas0pX_oM43x84qg"/><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface truncate">Anchor Parent</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Family Dashboard</span></div></div><div class="flex items-center gap-2"><button class="min-h-[44px] px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 transition-colors" type="button"><span class="w-2 h-2 rounded-full bg-status-enforced"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Family (2)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FS5umrR2WoScL2OVZtL8Bv6wPauaXgjFhCTjtFkcA7qkDFvDFRH40fKNcwh-Xmkzd8IeaoxQxekbnMEFZrpLQmmrI-YreKZ-SMwc6lsyQJ3z_3CcqPVtv5-8Mg8beWOubN2kmr6-U3z2WuqCOWyqDCOdftmFE99ZaVqEs5UJDPrEItjkRcrNN0lyQ0dJe_f8S3ZqSX8YfGbOFh9UMkYvVyGxJfOFIsc5Pm_-3FYG"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-28"><div class="flex flex-col w-full px-4 pb-8 space-y-4">
+<!-- Child Context & Device State Bar -->
+<div class="flex items-center justify-between bg-surface-container-low px-3.5 py-2.5 rounded-xl">
+<div class="flex items-center space-x-2.5 min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Warm natural portrait of an 11-year-old boy named Leo smiling outdoors in soft afternoon golden sunlight, wearing a casual navy blue collared shirt, photographic realism, tranquil and uplifting tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWp9RSRNDlwDt76AxF8knyoXomayhmWmt-TLxj3G1d1IY6jSNOV5845OI6rY5teMtE5RD94U4E731hUa1IRN4mc943AFhlXPbvh8-q2e2yjRtZzeWWJ9g8wXyVDUb_KyQfA1cZrKOL9aSjnRtR_42jKdiRIYbexMa7NwDEvYyV5uyideqFDBIT_XSr31HHKMapRxEQEUfRxnaAo73mz31p51_BQfo9OuSp8ujD_RG5"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-enforced rounded-full"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-1.5 truncate">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Leo Jenkins</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">• Age 11</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Samsung Galaxy A34</span>
+</div>
+</div>
+<div class="flex items-center space-x-1.5 bg-surface px-2.5 py-1 rounded-full shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[15px] text-status-enforced" style="font-variation-settings: 'FILL' 1;">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Synced 2m ago</span>
+</div>
+</div>
+<!-- Screen Header & Calm Guidance Context -->
+<div class="space-y-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Screen-Time Analytics</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Healthy digital balance trends, category breakdowns, and sleep wind-down insights for Leo.</p>
+</div>
+<!-- Time Range Switcher Tabs -->
+<div class="bg-surface-variant p-1 rounded-xl flex items-center justify-between" role="tablist">
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md text-on-surface-variant rounded-lg transition-colors hover:text-on-surface" type="button">Today</button>
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md bg-surface text-primary shadow-sm rounded-lg font-semibold transition-all" type="button">7 Days</button>
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md text-on-surface-variant rounded-lg transition-colors hover:text-on-surface" type="button">30 Days</button>
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md text-on-surface-variant rounded-lg transition-colors hover:text-on-surface" type="button">Custom</button>
+</div>
+<!-- Section 1: Weekly Digital Health Scorecard -->
+<div class="bg-surface-variant rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Weekly Balance Scorecard</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-medium">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+        Within Healthy Target
+      </span>
+</div>
+<!-- Metric Dual Columns -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Total Screen Time -->
+<div class="bg-surface p-3 rounded-lg flex flex-col justify-between space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Screen Time</span>
+<div class="flex items-baseline space-x-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">14h 20m</span>
+</div>
+<div class="flex items-center space-x-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+<span>-18% vs last week</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg: 2h 03m / day</span>
+</div>
+<!-- Offline & Active Ratio -->
+<div class="bg-surface p-3 rounded-lg flex flex-col justify-between space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Offline Active Time</span>
+<div class="flex items-baseline space-x-1">
+<span class="font-headline-sm text-headline-sm text-secondary">22h 45m</span>
+</div>
+<div class="flex items-center space-x-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">nature_people</span>
+<span>+3h 10m outdoors</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Non-screen activity</span>
+</div>
+</div>
+<!-- Habit Consistency Banner -->
+<div class="bg-surface-container-low px-3 py-2 rounded-lg flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sleep Wind-Down Routine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6 of 7 days met the 8:30 PM bedtime device docking habit</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Daily Breakdown Chart / Visual Rhythm -->
+<div class="bg-surface-variant rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Daily Screen Rhythm</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Stacked usage against 2h 30m daily family guideline</p>
+</div>
+<div class="flex items-center space-x-1 bg-surface px-2 py-1 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span class="font-label-sm text-label-sm">Past 7 Days</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center space-x-4 pt-1">
+<div class="flex items-center space-x-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-enforced"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Learning</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gaming &amp; Fun</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Social</span>
+</div>
+</div>
+<!-- Chart Container with SVG & Stacked Bars -->
+<div class="bg-surface p-3.5 rounded-lg space-y-3">
+<!-- Target Cap Indicator line -->
+<div class="relative flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Daily guideline cap (2h 30m)</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Today: 2h 15m</span>
+</div>
+<!-- Responsive SVG Stacked Bar Visualizer -->
+<div class="w-full h-44 relative">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 320 160">
+<!-- Horizontal Guideline Cap Line (dashed at 2h 30m = Y: 45) -->
+<line stroke="#16816B" stroke-dasharray="4 4" stroke-opacity="0.6" stroke-width="1.5" x1="10" x2="310" y1="48" y2="48"></line>
+<!-- MONDAY: 1h 55m total (H: 80) -->
+<!-- Learning: 45m (30) -->
+<rect fill="#16816B" height="30" rx="3" width="22" x="18" y="110"></rect>
+<!-- Gaming: 50m (35) -->
+<rect fill="#fbbb58" height="35" rx="3" width="22" x="18" y="73"></rect>
+<!-- Social: 20m (15) -->
+<rect fill="#3154a6" height="15" rx="3" width="22" x="18" y="56"></rect>
+<!-- TUESDAY (TODAY - HIGHLIGHTED): 2h 15m total (H: 95) -->
+<rect fill="#eff4ff" height="130" rx="5" width="26" x="62" y="14"></rect>
+<rect fill="#16816B" height="42" rx="3" width="22" x="64" y="98"></rect>
+<rect fill="#fbbb58" height="34" rx="3" width="22" x="64" y="62"></rect>
+<rect fill="#3154a6" height="17" rx="3" width="22" x="64" y="43"></rect>
+<!-- WEDNESDAY: 2h 05m total (H: 88) -->
+<rect fill="#16816B" height="40" rx="3" width="22" x="110" y="100"></rect>
+<rect fill="#fbbb58" height="30" rx="3" width="22" x="110" y="68"></rect>
+<rect fill="#3154a6" height="14" rx="3" width="22" x="110" y="52"></rect>
+<!-- THURSDAY: 1h 45m total (H: 72) -->
+<rect fill="#16816B" height="32" rx="3" width="22" x="156" y="108"></rect>
+<rect fill="#fbbb58" height="26" rx="3" width="22" x="156" y="80"></rect>
+<rect fill="#3154a6" height="10" rx="3" width="22" x="156" y="68"></rect>
+<!-- FRIDAY: 2h 25m total (H: 102) -->
+<rect fill="#16816B" height="34" rx="3" width="22" x="202" y="106"></rect>
+<rect fill="#fbbb58" height="52" rx="3" width="22" x="202" y="52"></rect>
+<rect fill="#3154a6" height="12" rx="3" width="22" x="202" y="38"></rect>
+<!-- SATURDAY: 1h 35m total (H: 65) Low Gaming / Outdoor Day -->
+<rect fill="#16816B" height="25" rx="3" width="22" x="248" y="115"></rect>
+<rect fill="#fbbb58" height="23" rx="3" width="22" x="248" y="90"></rect>
+<rect fill="#3154a6" height="13" rx="3" width="22" x="248" y="75"></rect>
+<!-- SUNDAY: 2h 20m total (H: 98) -->
+<rect fill="#16816B" height="36" rx="3" width="22" x="290" y="104"></rect>
+<rect fill="#fbbb58" height="44" rx="3" width="22" x="290" y="58"></rect>
+<rect fill="#3154a6" height="14" rx="3" width="22" x="290" y="42"></rect>
+<!-- Baseline -->
+<line stroke="#D5DCE5" stroke-width="1" x1="10" x2="310" y1="142" y2="142"></line>
+</svg>
+<!-- X-Axis Day Labels -->
+<div class="flex justify-between px-1 text-center font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span class="w-8">Mon</span>
+<span class="w-8 text-primary font-bold">Tue</span>
+<span class="w-8">Wed</span>
+<span class="w-8">Thu</span>
+<span class="w-8">Fri</span>
+<span class="w-8">Sat</span>
+<span class="w-8">Sun</span>
+</div>
+</div>
+<!-- Positive Reinforcement Callout -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-start space-x-2">
+<span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0 mt-0.5">sports_soccer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Great balance on Saturday:</strong> Leo spent 4h 15m outdoors during youth soccer, staying well below gaming limits.
+        </p>
+</div>
+</div>
+</div>
+<!-- Section 3: Top App Usage Breakdown -->
+<div class="bg-surface-variant rounded-xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[20px] text-primary">apps</span>
+<h2 class="font-title-md text-title-md text-on-surface">Top Apps Breakdown</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sorted by time</span>
+</div>
+<!-- App List -->
+<div class="space-y-2">
+<!-- 1. Duolingo -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-status-enforced/10 text-status-enforced flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">Duolingo</span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded font-medium flex-shrink-0">Learning</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate font-medium">+15% study time • Unmetered</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">3h 40m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">26%</p>
+</div>
+</div>
+<!-- 2. Minecraft -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed-dim/20 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">Minecraft</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded flex-shrink-0">Controlled</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cap maintained (avg 45m/day)</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">3h 10m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">22%</p>
+</div>
+</div>
+<!-- 3. Khan Academy -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-status-enforced/10 text-status-enforced flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">Khan Academy</span>
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded font-medium flex-shrink-0">Learning</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate font-medium">Math Homework Completed</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">2h 50m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">20%</p>
+</div>
+</div>
+<!-- 4. Roblox -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed-dim/20 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">gamepad</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">Roblox</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded flex-shrink-0">Controlled</span>
+</div>
+<span class="font-body-sm text-body-sm text-status-pending truncate font-medium">Extensions requested 2x</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">2h 15m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">16%</p>
+</div>
+</div>
+<!-- 5. WhatsApp -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">WhatsApp</span>
+<span class="px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm rounded flex-shrink-0">Family</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Approved family &amp; grandma chats</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">1h 10m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">8%</p>
+</div>
+</div>
+<!-- 6. Camera & Notes -->
+<div class="bg-surface p-3 rounded-lg flex items-center justify-between space-x-3">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-2">
+<span class="font-title-sm text-title-sm text-on-surface truncate font-semibold">Camera &amp; Notes</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded flex-shrink-0">Creative</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Drawing &amp; nature photo project</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">1h 15m</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">8%</p>
+</div>
+</div>
+</div>
+<!-- View All 18 Apps Button -->
+<button class="w-full py-2.5 rounded-lg bg-surface text-primary font-label-md text-label-md flex items-center justify-center space-x-1.5 hover:bg-surface-container-low transition-colors" type="button">
+<span>View All 18 Tracked Apps</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Section 4: Pickups & Device Rhythms -->
+<div class="bg-surface-variant rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">touch_app</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface">Pickups &amp; Rhythms</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[15px] mr-0.5">arrow_downward</span>
+        -12 pickups/day
+      </span>
+</div>
+<!-- Main Pickups Metric -->
+<div class="bg-surface p-3.5 rounded-lg flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">38</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1.5">pickups / day average</span>
+</div>
+<span class="inline-flex px-2 py-1 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-medium">
+        Healthy Focus
+      </span>
+</div>
+<!-- Rhythm Milestones Grid -->
+<div class="grid grid-cols-3 gap-2.5">
+<div class="bg-surface p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+<span class="font-label-sm text-label-sm">First Pickup</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">7:25 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1">Post routine</span>
+</div>
+<div class="bg-surface p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[16px]">bedtime</span>
+<span class="font-label-sm text-label-sm">Last Docked</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">8:28 PM</span>
+<span class="font-body-sm text-body-sm text-secondary text-[11px] leading-tight mt-1">Before 8:30 cap</span>
+</div>
+<div class="bg-surface p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center space-x-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[16px]">self_improvement</span>
+<span class="font-label-sm text-label-sm">Focus Block</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">1h 45m</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1">Homework uninterrupted</span>
+</div>
+</div>
+</div>
+<!-- Section 5: Family Discussion Insights & Trends (Coaching Card) -->
+<div class="bg-primary/5 rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-start space-x-3">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Guardian Coaching Insight</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-0.5">Consistent Homework Discipline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Leo is consistently finishing his French &amp; Khan Academy lessons before launching gaming apps. Consider awarding a <strong class="text-on-surface font-semibold">Trust Bonus</strong> or adjusting Sunday limits during the weekend family check-in.
+        </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-2 pt-1">
+<button class="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center space-x-2 shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span>Discuss in Family Chat</span>
+</button>
+<button class="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-surface text-secondary font-label-lg text-label-lg font-semibold flex items-center justify-center space-x-2 hover:bg-surface-container-low transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span>Adjust App Limits</span>
+</button>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="app-usage-and-limits" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm mt-0.5">Rules</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="geofences-and-location" href="#"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm mt-0.5">Location</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors relative" data-path="time-requests" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-2 px-1 min-w-[16px] h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] leading-4 text-center font-bold">1</span></div><span class="font-label-sm text-label-sm mt-0.5">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-and-settings" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Family</span></a></div><div class="h-4 flex items-center justify-center pb-1"><div class="w-28 h-1 rounded-full bg-on-surface-variant/30"></div></div></nav></body></html>

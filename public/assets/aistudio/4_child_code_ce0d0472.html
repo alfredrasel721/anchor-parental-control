@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#fbbb58", "on-secondary-container": "#00705c", "on-surface": "#131c28", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#002019", "inverse-primary": "#b2c5ff", "surface-dim": "#d1daeb", "tertiary-container": "#795000", "on-tertiary-fixed-variant": "#624000", "on-primary": "#ffffff", "surface-variant": "#dae3f4", "error-container": "#ffdad6", "on-primary-fixed-variant": "#1b4293", "surface-container-low": "#eff4ff", "status-failed": "#B42318", "secondary-container": "#94f1d6", "on-surface-variant": "#444651", "surface-container": "#E8ECF2", "status-unsupported": "#5C6470", "on-tertiary-fixed": "#291800", "on-primary-container": "#beceff", "tertiary-fixed": "#ffddb1", "inverse-surface": "#28313d", "on-tertiary-container": "#ffc56f", "secondary-fixed-dim": "#7ad7be", "secondary": "#006b58", "surface-container-highest": "#dae3f4", "on-secondary-fixed-variant": "#005142", "primary-fixed-dim": "#b2c5ff", "background": "#f8f9ff", "status-pending": "#9A6700", "outline-subtle": "#D5DCE5", "on-error": "#ffffff", "on-secondary": "#ffffff", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "status-enforced": "#16816B", "primary-container": "#3154a6", "on-background": "#131c28", "on-tertiary": "#ffffff", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "tertiary": "#5a3b00", "surface-container-high": "#e0e9f9", "secondary-fixed": "#97f4d9", "outline-variant": "#c4c6d3", "surface": "#FFFFFF", "surface-container-lowest": "#ffffff", "outline": "#747783", "on-primary-fixed": "#001848", "on-error-container": "#93000a", "primary": "#113c8d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "headline-sm": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "body-lg": ["Inter"], "title-sm": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "headline-md": ["Roboto Flex"], "label-lg": ["Inter"], "headline-lg": ["Roboto Flex"], "label-sm": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-xl bg-status-enforced/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-status-enforced text-[22px]">anchor</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface truncate">Leo, 11</span><span class="relative flex h-2 w-2 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-enforced opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-status-enforced"></span></span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm truncate"><span class="truncate">Galaxy A34</span><span>•</span><span class="text-status-enforced font-medium flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">verified_user</span>Protected</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-status-enforced/15 text-status-enforced flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">sync</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<!-- Screen Sub-Header & Dynamic Child Persona Indicator -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] mr-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Synced 2m ago
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Android 14 (OneUI 6)</span>
+</div>
+<span class="inline-flex items-center gap-1 text-status-enforced font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+          Live Guard
+        </span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Allowed Apps &amp; Schedules</h1>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Here are the rules you and Mom agreed on for Tuesday.</p>
+</div>
+<!-- Active Routine Focus Banner -->
+<div class="relative overflow-hidden rounded-xl bg-status-enforced text-on-secondary shadow-md p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-white/20 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-white font-medium">Active Window</span>
+</div>
+<div class="flex items-center gap-1 text-white/90 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Until 8:30 PM</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-white">Free Play &amp; Homework Window</h2>
+<p class="font-body-sm text-body-sm text-white/90 mt-0.5">Games have 20m remaining today. All school apps stay completely unlimited!</p>
+</div>
+<!-- Quick Status Pills -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="bg-black/15 rounded-lg p-space-xs px-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-[18px]">sports_esports</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-white/80">Entertainment</span>
+<span class="font-title-sm text-title-sm text-white truncate">20m left</span>
+</div>
+</div>
+<div class="bg-black/15 rounded-lg p-space-xs px-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-[18px]">school</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-white/80">Learning Apps</span>
+<span class="font-title-sm text-title-sm text-white truncate">Unmetered 🌟</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Daily Timeline Rhythm Card -->
+<div class="rounded-xl bg-surface-variant p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-status-enforced">
+<span class="material-symbols-outlined text-[18px]">pace</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface">Today's Schedule Rhythm</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oakridge School Day</span>
+</div>
+<!-- Segmented Bar Rhythm Indicator -->
+<div class="flex flex-col gap-space-xs">
+<div class="h-3 w-full rounded-full bg-surface-container flex overflow-hidden p-0.5 gap-0.5">
+<div class="h-full bg-status-unsupported/40 rounded-sm" style="width: 8%" title="Morning Prep"></div>
+<div class="h-full bg-primary-container/50 rounded-sm" style="width: 32%" title="School Hours"></div>
+<div class="h-full bg-status-enforced rounded-sm shadow-sm" style="width: 28%" title="Current: Free Play &amp; Homework"></div>
+<div class="h-full bg-surface-dim rounded-sm" style="width: 32%" title="Wind-Down"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm px-0.5">
+<span>7 AM</span>
+<span>8 AM</span>
+<span class="font-semibold text-status-enforced">3:30 PM (Now)</span>
+<span>8:30 PM</span>
+<span>Bed</span>
+</div>
+</div>
+<!-- Schedule Stage List -->
+<div class="flex flex-col gap-space-sm pt-1">
+<!-- Morning -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest opacity-75">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-center">
+<span class="font-title-sm text-title-sm text-on-surface">Morning Prep</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7:00 – 8:00 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Essentials only (Alarm, Weather, Family Chat).</p>
+</div>
+</div>
+<!-- School -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest opacity-75">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-center">
+<span class="font-title-sm text-title-sm text-on-surface">School Hours</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8:00 AM – 3:30 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Oakridge Wi-Fi mode. Games paused; Classroom &amp; Khan unlocked.</p>
+</div>
+</div>
+<!-- Free Play (Current Active) -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-secondary-container/40">
+<div class="w-8 h-8 rounded-full bg-status-enforced text-on-secondary flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Free Play &amp; Homework</span>
+<span class="px-1.5 py-0.5 rounded bg-status-enforced text-on-secondary font-label-sm text-label-sm">Current</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-semibold">3:30 – 8:30 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Gaming cap 1h 30m total. Learning apps remain unmetered.</p>
+</div>
+</div>
+<!-- Bedtime -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">bedtime</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-center">
+<span class="font-title-sm text-title-sm text-on-surface">Bedtime Wind-Down</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8:30 PM – 7:00 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quiet night mode. Emergency calls &amp; family SOS remain open.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Category Allowances -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">App Allowances for Leo</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 categories</span>
+</div>
+<!-- Category 1: Games & Entertainment -->
+<div class="rounded-xl bg-surface-variant p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Games &amp; Entertainment</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Daily shared limit: 1h 30m</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-status-pending">20m left</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">1h 10m used</div>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container rounded-full h-2 mt-2 overflow-hidden flex">
+<div class="bg-status-pending h-2 rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+</div>
+<!-- Apps inside Games -->
+<div class="flex flex-col gap-space-xs pt-1">
+<!-- Minecraft -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[22px] text-secondary">grid_view</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Minecraft</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">45m used today</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm shrink-0">
+              Active limit
+            </span>
+</div>
+<!-- Roblox -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[22px] text-primary">token</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Roblox</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25m used today</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm shrink-0">
+              Active limit
+            </span>
+</div>
+<!-- YouTube Kids -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center text-error shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[22px]">smart_display</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">YouTube Kids</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Daylight hours only (7am - 7pm)</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0">
+              Daylight rule
+            </span>
+</div>
+</div>
+</div>
+<!-- Category 2: Learning & School -->
+<div class="rounded-xl bg-surface-variant p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-sm text-title-sm text-on-surface">Learning &amp; School</h3>
+<span class="text-status-enforced font-label-sm text-label-sm font-semibold">🌟 Bonus</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero timer caps • Unmetered growth</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full bg-status-enforced/15 text-status-enforced font-label-sm text-label-sm font-medium">
+            Unlimited
+          </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Khan Academy -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/40 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[22px]">calculate</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Khan Academy</span>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">Free study bonus</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-enforced text-[20px]" style="font-variation-settings: 'FILL' 1;">all_inclusive</span>
+</div>
+<!-- Duolingo -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed/50 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">translate</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Duolingo</span>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">Streak safe • Never counted</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-enforced text-[20px]" style="font-variation-settings: 'FILL' 1;">all_inclusive</span>
+</div>
+<!-- Google Classroom -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Google Classroom</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oakridge Grade 6 sync</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-enforced text-[20px]" style="font-variation-settings: 'FILL' 1;">all_inclusive</span>
+</div>
+</div>
+</div>
+<!-- Category 3: Family & Communication -->
+<div class="rounded-xl bg-surface-variant p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Family &amp; Communication</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Parents unlocked • Friends 30m</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Protected
+          </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- WhatsApp Family -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/40 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">WhatsApp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Approved family group chats only</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Filtered
+            </span>
+</div>
+<!-- Phone Dialer -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-status-enforced/15 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Phone Dialer</span>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">Always open: Mom, Dad, Grandma &amp; 911</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-enforced text-[20px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+</div>
+</div>
+<!-- Category 4: Always Available Utilities -->
+<div class="rounded-xl bg-surface-variant p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">build</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Everyday Utilities</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Essential tools that are always unlocked</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium">No Limits</span>
+</div>
+<!-- Horizontal App Badges -->
+<div class="grid grid-cols-4 gap-2 pt-2">
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest text-center">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate w-full">Calculator</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest text-center">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">alarm</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate w-full">Clock</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest text-center">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate w-full">Notes</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest text-center">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate w-full">Camera</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Polish: Cooperative Request Hero Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[26px]">add_moderator</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface">Need an app for a school project?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Send an instant request to Mom. She usually replies in less than 5 minutes!
+          </p>
+</div>
+</div>
+<!-- Action Button 48dp -->
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-transform" id="requestAppBtn">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Request App Permission from Sarah</span>
+</button>
+<!-- Transparency Note -->
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-status-enforced">handshake</span>
+<span>Agreed during Sunday Family Check-in. Next review: Sun 6:00 PM.</span>
+</div>
+</div>
+</div>
+<!-- Local Interactive Feedback Modal / Toast -->
+<div class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-end justify-center p-4" id="requestModal">
+<div class="w-full max-w-md bg-surface rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface">Ask Sarah for an App</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeModalBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">App name or Play Store link</label>
+<input class="h-12 px-space-md rounded-xl bg-surface-variant text-on-surface placeholder:text-on-surface-variant/60 outline-none font-body-md text-body-md" placeholder="e.g. Scratch Coding, Chess.com" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Why do you need it?</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 px-3 rounded-lg bg-secondary-container/50 text-on-secondary-container text-left font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> School Homework
+          </button>
+<button class="h-10 px-3 rounded-lg bg-surface-variant text-on-surface text-left font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">sports_esports</span> Fun &amp; Games
+          </button>
+</div>
+</div>
+<button class="w-full h-12 rounded-xl bg-status-enforced text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 mt-2 shadow-sm" id="submitRequestBtn">
+<span class="material-symbols-outlined text-[20px]">outgoing_mail</span>
+<span>Send to Mom's Phone</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const requestBtn = document.getElementById('requestAppBtn');
+    const modal = document.getElementById('requestModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const submitBtn = document.getElementById('submitRequestBtn');
+
+    if (requestBtn && modal && closeBtn) {
+      requestBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+
+      if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> Sent to Sarah!';
+          submitBtn.classList.remove('bg-status-enforced');
+          submitBtn.classList.add('bg-primary');
+          setTimeout(() => {
+            modal.classList.add('hidden');
+            submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">outgoing_mail</span><span>Send to Mom\'s Phone</span>';
+            submitBtn.classList.remove('bg-primary');
+            submitBtn.classList.add('bg-status-enforced');
+          }, 1200);
+        });
+      }
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,28,40,0.05)]" data-active-classes="text-status-enforced font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-status-enforced font-semibold" data-path="c-03-today-screen-time" href="#"><span class="material-symbols-outlined text-[22px]">schedule</span><span class="font-label-sm text-label-sm">Today</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="c-06-request-extra-time" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="c-08-sos-emergency-check-in" href="#"><span class="material-symbols-outlined text-[22px]">emergency</span><span class="font-label-sm text-label-sm">Safety</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="family-collaborate" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm">Family</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-sharing" href="#"><span class="material-symbols-outlined text-[22px]">lock</span><span class="font-label-sm text-label-sm">Privacy</span></a></div></nav></body></html>

@@ -1,0 +1,127 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        request.auth.token.email == "alfredrasel721@gmail.com" &&
+        request.auth.token.email_verified == true;
+    }
+
+    function isFamilyMember(data) {
+      return isAuthenticated() && (
+        request.auth.uid == data.primaryGuardianUid ||
+        request.auth.uid in data.memberUids ||
+        isAdmin()
+      );
+    }
+
+    function isValidFamilyHousehold(data) {
+      return data.keys().hasAll([
+          'id',
+          'householdName',
+          'primaryGuardianUid',
+          'memberUids',
+          'subscriptionTier',
+          'pairingCode',
+          'payloadJson',
+          'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id',
+          'householdName',
+          'primaryGuardianUid',
+          'primaryGuardianEmail',
+          'memberUids',
+          'subscriptionTier',
+          'pairingCode',
+          'pairingExpiresAt',
+          'selectedChildId',
+          'deviceBatteryLevel',
+          'lastKnownBatterySync',
+          'payloadJson',
+          'updatedAt'
+        ]) &&
+        data.id is string && data.id.size() >= 1 && data.id.size() <= 128 &&
+        data.householdName is string && data.householdName.size() >= 1 && data.householdName.size() <= 120 &&
+        data.primaryGuardianUid is string && data.primaryGuardianUid.size() >= 1 && data.primaryGuardianUid.size() <= 128 &&
+        data.memberUids is list && data.memberUids.size() >= 1 && data.memberUids.size() <= 30 &&
+        data.subscriptionTier in ['free', 'annual_trial', 'monthly_premium'] &&
+        data.pairingCode is string && data.pairingCode.size() >= 6 && data.pairingCode.size() <= 12 &&
+        (!('deviceBatteryLevel' in data) || (data.deviceBatteryLevel is number && data.deviceBatteryLevel >= 0 && data.deviceBatteryLevel <= 100)) &&
+        (!('lastKnownBatterySync' in data) || (data.lastKnownBatterySync is string && data.lastKnownBatterySync.size() <= 64)) &&
+        data.payloadJson is string && data.payloadJson.size() >= 2 && data.payloadJson.size() <= 900000 &&
+        data.updatedAt is string && data.updatedAt.size() >= 10 && data.updatedAt.size() <= 64;
+    }
+
+    function isValidPairingHandshake(data) {
+      return data.keys().hasAll(['code', 'familyId', 'childId', 'createdByUid', 'expiresAt', 'status']) &&
+        data.keys().hasOnly(['code', 'familyId', 'childId', 'createdByUid', 'expiresAt', 'status']) &&
+        data.code is string && data.code.size() >= 6 && data.code.size() <= 12 &&
+        data.familyId is string && data.familyId.size() >= 1 && data.familyId.size() <= 128 &&
+        data.childId is string && data.childId.size() >= 1 && data.childId.size() <= 128 &&
+        data.createdByUid is string && data.createdByUid.size() >= 1 && data.createdByUid.size() <= 128 &&
+        data.expiresAt is number &&
+        data.status in ['waiting', 'paired', 'expired'];
+    }
+
+    // ===============================================================
+    // Family Household Collection (Strict Family Isolation)
+    // ===============================================================
+    match /families/{familyId} {
+      allow read: if isFamilyMember(resource.data);
+
+      allow create: if isAuthenticated() &&
+        isValidFamilyHousehold(request.resource.data) &&
+        request.resource.data.id == familyId &&
+        request.resource.data.primaryGuardianUid == request.auth.uid &&
+        request.auth.uid in request.resource.data.memberUids;
+
+      allow update: if isAuthenticated() &&
+        isValidFamilyHousehold(request.resource.data) &&
+        request.resource.data.id == resource.data.id &&
+        request.resource.data.primaryGuardianUid == resource.data.primaryGuardianUid &&
+        (
+          isFamilyMember(resource.data) ||
+          (
+            request.resource.data.pairingCode == resource.data.pairingCode &&
+            request.auth.uid in request.resource.data.memberUids
+          )
+        );
+
+      allow delete: if isAuthenticated() && (
+        request.auth.uid == resource.data.primaryGuardianUid ||
+        isAdmin()
+      );
+    }
+
+    // ===============================================================
+    // Pairing Handshake Collection
+    // ===============================================================
+    match /pairings/{code} {
+      allow read: if isAuthenticated();
+
+      allow create: if isAuthenticated() &&
+        isValidPairingHandshake(request.resource.data) &&
+        request.resource.data.code == code &&
+        request.resource.data.createdByUid == request.auth.uid;
+
+      allow update: if isAuthenticated() &&
+        isValidPairingHandshake(request.resource.data) &&
+        request.resource.data.code == resource.data.code &&
+        request.resource.data.familyId == resource.data.familyId &&
+        request.resource.data.createdByUid == resource.data.createdByUid;
+
+      allow delete: if isAuthenticated() && (
+        request.auth.uid == resource.data.createdByUid ||
+        isAdmin()
+      );
+    }
+  }
+}

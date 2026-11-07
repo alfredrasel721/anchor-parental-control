@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#5a3b00", "surface-container-highest": "#dae3f4", "surface-container": "#E8ECF2", "status-pending": "#9A6700", "inverse-surface": "#28313d", "surface-variant": "#dae3f4", "surface-tint": "#385aad", "inverse-primary": "#b2c5ff", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "surface-container-low": "#eff4ff", "tertiary-container": "#795000", "on-background": "#131c28", "outline": "#747783", "primary": "#113c8d", "on-surface-variant": "#444651", "tertiary-fixed-dim": "#fbbb58", "on-tertiary": "#ffffff", "status-enforced": "#16816B", "on-primary-fixed-variant": "#1b4293", "status-failed": "#B42318", "background": "#f8f9ff", "outline-subtle": "#D5DCE5", "primary-fixed": "#dae2ff", "on-secondary-fixed-variant": "#005142", "secondary": "#006b58", "secondary-container": "#94f1d6", "on-secondary-fixed": "#002019", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-container": "#00705c", "on-primary-container": "#beceff", "tertiary-fixed": "#ffddb1", "error-container": "#ffdad6", "on-error-container": "#93000a", "primary-fixed-dim": "#b2c5ff", "primary-container": "#3154a6", "outline-variant": "#c4c6d3", "surface": "#FFFFFF", "surface-container-high": "#e0e9f9", "surface-bright": "#f8f9ff", "on-primary-fixed": "#001848", "on-tertiary-container": "#ffc56f", "surface-dim": "#d1daeb", "on-tertiary-fixed": "#291800", "secondary-fixed": "#97f4d9", "secondary-fixed-dim": "#7ad7be", "status-unsupported": "#5C6470", "on-tertiary-fixed-variant": "#624000", "on-surface": "#131c28", "surface-container-lowest": "#ffffff", "error": "#ba1a1a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-tablet": "1.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-lg": "1rem", "space-md": "0.75rem", "margin-tablet": "1.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem" }, fontFamily: { "body-lg": ["Inter"], "headline-lg-mobile": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "headline-lg": ["Roboto Flex"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Roboto Flex"], "body-sm": ["Inter"], "label-sm": ["Inter"], "title-sm": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"] }, fontSize: { "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "16px", fontWeight: "500" }], "title-sm": ["14px", { lineHeight: "20px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;background-color:#FFFFFF;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 rounded-full flex items-center justify-center text-status-enforced hover:bg-secondary-container/30 active:bg-secondary-container/50 transition-colors focus:outline-none" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button><div class="flex items-center gap-space-xs bg-secondary-container/40 px-space-md py-space-xs rounded-full"><span class="material-symbols-outlined text-status-enforced text-[18px]">verified_user</span><span class="font-label-sm text-label-sm text-status-enforced font-medium">Kid Safe Sync</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 px-space-sm py-1 bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-status-enforced animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Step 2 of 3</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Connected to Jenkins Family</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Sarah Jenkins (Mom) • Samsung A34</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">sync</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Linked</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center gap-space-xs text-status-pending">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Step 2 of 2 • Android System Permissions</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">Setting Up Your Safe Device</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Anchor needs standard Android system permissions to enforce family limits and keep you safe. Here is exactly how they work—and what stays 100% private.
+      </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface">Transparent &amp; Collaborative Guardian Pledge</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+          We believe in trust, not covert spying. Anchor never accesses keystrokes, personal gallery photos, camera streams, or private messaging logs.
+        </span>
+</div>
+</div>
+<div class="flex flex-col gap-space-md mt-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all duration-300" id="card-perm-1">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">apps</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">App Usage &amp; Timers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accessibility &amp; Usage Stats API</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold tracking-wide flex items-center gap-1 shrink-0" id="badge-perm-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending"></span>
+            Action Required
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface p-space-md rounded-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-enforced text-[14px]">check</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it does:</strong> Monitors app time counters (such as your 1h Minecraft cap) and gently pauses apps when agreed limits are reached.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-error-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-failed text-[14px]">block</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it NEVER does:</strong> Never reads keyboard inputs, private messages, internet search queries, or stored passwords.
+            </p>
+</div>
+</div>
+<button class="w-full h-12 bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-sm transition-all shadow-sm" id="btn-perm-1" onclick="grantPermission(1)" type="button">
+<span>Enable App Limits</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-secondary-container/40 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[24px]">pin_drop</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Location &amp; Safe Zones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Background Geolocation</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold tracking-wide flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Granted ✓
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface p-space-md rounded-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-enforced text-[14px]">check</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it does:</strong> Lets Mom (Sarah) know when you safely arrive at Oakridge Middle School and powers your tap-to-ping SOS beacon.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-error-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-failed text-[14px]">block</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it NEVER does:</strong> Never sells or shares your coordinates with advertisers, third-party apps, or external databases.
+            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all duration-300" id="card-perm-3">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">security</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Knox Shield Administration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Device Administrator Policy</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold tracking-wide flex items-center gap-1 shrink-0" id="badge-perm-3">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending"></span>
+            Action Required
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface p-space-md rounded-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-enforced text-[14px]">check</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it does:</strong> Prevents accidental uninstallation and locks entertainment apps during your scheduled 8:30 PM Bedtime Downtime.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-error-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-failed text-[14px]">block</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it NEVER does:</strong> Never remotely erases personal device storage or restricts your ability to dial emergency 911 dispatchers.
+            </p>
+</div>
+</div>
+<button class="w-full h-12 bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-sm transition-all shadow-sm" id="btn-perm-3" onclick="grantPermission(3)" type="button">
+<span>Enable Shield</span>
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-secondary-container/40 flex items-center justify-center text-status-enforced shrink-0">
+<span class="material-symbols-outlined text-[24px]">notifications_active</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Live Transparency Banner</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Foreground Service Notifications</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold tracking-wide flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Granted ✓
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface p-space-md rounded-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-enforced text-[14px]">check</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it does:</strong> Displays an honest, always-visible status card in your top notification tray whenever active time tracking is running.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-error-container/60 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-failed text-[14px]">block</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">What it NEVER does:</strong> Never operates silently in the dark. You will always know when family protection tools are engaged.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-space-md rounded-xl flex items-center gap-space-md mt-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        Android will now present official system confirmation dialogs. Feel free to pass the device to <strong class="font-semibold text-on-surface">Sarah</strong> if you have questions!
+      </p>
+</div>
+<div class="h-28"></div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-space-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex flex-col gap-space-sm max-w-lg mx-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-enforced text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface font-medium" id="counter-label">2 of 4 permissions granted</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-status-enforced transition-all duration-500 rounded-full" id="progress-bar" style="width: 50%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-12 bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-sm cursor-not-allowed transition-all opacity-60" disabled="" id="btn-complete-setup" type="button">
+<span>Continue to Setup Complete</span>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="w-full h-10 text-secondary hover:bg-secondary-container/20 active:bg-secondary-container/40 font-label-md text-label-md rounded-lg flex items-center justify-center gap-1 transition-colors" onclick="showGuardianDialog()" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Review with Mom &amp; Dad</span>
+</button>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-margin" id="guardian-modal">
+<div class="bg-surface rounded-t-2xl sm:rounded-2xl w-full max-w-sm p-space-xl flex flex-col gap-space-lg shadow-xl animate-in fade-in slide-in-from-bottom-6 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-status-enforced">
+<span class="material-symbols-outlined text-[22px]">family_restroom</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Family Transparency</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sarah Jenkins • Guardian</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" onclick="hideGuardianDialog()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        These settings are co-created with Sarah to support Leo’s healthy digital habits without invading personal space or private conversations.
+      </p>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-status-enforced font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Guardian Confirmation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Hand the device to Sarah to inspect requested Android policies together.
+        </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-12 bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-sm shadow-sm" onclick="grantAllForDemo(); hideGuardianDialog();" type="button">
+<span>Verify with Mom's Approval</span>
+</button>
+<button class="w-full h-11 text-on-surface-variant font-label-md text-label-md rounded-lg flex items-center justify-center" onclick="hideGuardianDialog()" type="button">
+<span>Cancel &amp; Back</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let grantedCount = 2;
+  const grantedPerms = { 1: false, 3: false };
+
+  function grantPermission(id) {
+    if (grantedPerms[id]) return;
+    grantedPerms[id] = true;
+    grantedCount++;
+
+    const badge = document.getElementById('badge-perm-' + id);
+    if (badge) {
+      badge.className = 'font-label-sm text-label-sm px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold tracking-wide flex items-center gap-1 shrink-0';
+      badge.innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span> Granted ✓';
+    }
+
+    const btn = document.getElementById('btn-perm-' + id);
+    if (btn) {
+      btn.className = 'w-full h-12 bg-surface-container text-status-enforced font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-sm transition-all cursor-default';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> <span>Permission Active</span>';
+      btn.disabled = true;
+    }
+
+    updateOverallProgress();
+  }
+
+  function updateOverallProgress() {
+    const counterLabel = document.getElementById('counter-label');
+    const progressBar = document.getElementById('progress-bar');
+    const completeBtn = document.getElementById('btn-complete-setup');
+
+    if (counterLabel) {
+      counterLabel.textContent = grantedCount + ' of 4 permissions granted';
+    }
+
+    const percentage = (grantedCount / 4) * 100;
+    if (progressBar) {
+      progressBar.style.width = percentage + '%';
+    }
+
+    if (grantedCount === 4 && completeBtn) {
+      completeBtn.disabled = false;
+      completeBtn.className = 'w-full h-12 bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-sm transition-all shadow-md';
+      completeBtn.onclick = function() {
+        alert('All Android safeguards enabled! Navigating Leo into safe synchronized mode.');
+      };
+    }
+  }
+
+  function showGuardianDialog() {
+    const modal = document.getElementById('guardian-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function hideGuardianDialog() {
+    const modal = document.getElementById('guardian-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function grantAllForDemo() {
+    grantPermission(1);
+    grantPermission(3);
+  }
+</script></main></body></html>

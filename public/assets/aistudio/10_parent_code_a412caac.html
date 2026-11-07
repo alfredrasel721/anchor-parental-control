@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Flex:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#FFFFFF;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#b2c5ff", "on-secondary": "#ffffff", "on-surface": "#131c28", "outline": "#747783", "status-pending": "#9A6700", "on-primary-fixed-variant": "#1b4293", "surface-variant": "#dae3f4", "background": "#f8f9ff", "secondary-fixed": "#97f4d9", "inverse-primary": "#b2c5ff", "secondary-fixed-dim": "#7ad7be", "inverse-surface": "#28313d", "on-secondary-container": "#00705c", "on-tertiary-fixed": "#291800", "surface-container-highest": "#dae3f4", "error": "#ba1a1a", "status-unsupported": "#5C6470", "surface-bright": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary": "#006b58", "on-primary-fixed": "#001848", "secondary-container": "#94f1d6", "primary-container": "#3154a6", "primary-fixed": "#dae2ff", "surface-tint": "#385aad", "on-tertiary-fixed-variant": "#624000", "status-failed": "#B42318", "on-tertiary": "#ffffff", "tertiary": "#5a3b00", "surface-container-low": "#eff4ff", "outline-variant": "#c4c6d3", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "status-enforced": "#16816B", "on-secondary-fixed": "#002019", "tertiary-fixed": "#ffddb1", "on-error": "#ffffff", "surface-dim": "#d1daeb", "surface": "#FFFFFF", "tertiary-fixed-dim": "#fbbb58", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-background": "#131c28", "outline-subtle": "#D5DCE5", "surface-container": "#e5eeff", "tertiary-container": "#795000", "on-surface-variant": "#444651", "surface-container-high": "#e0e9f9", "on-primary-container": "#beceff", "primary": "#113c8d", "on-tertiary-container": "#ffc56f", "on-secondary-fixed-variant": "#005142" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "space-md": "0.75rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-lg": "1rem", "space-xl": "1.5rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Roboto Flex"], "headline-lg-mobile": ["Roboto Flex"], "label-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "title-md": ["Inter"], "title-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Roboto Flex"], "body-md": ["Inter"], "headline-lg": ["Roboto Flex"] }, "fontSize": { "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "500"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-6 px-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm select-none"><span class="font-label-md text-label-md text-on-surface font-semibold">9:41</span><div class="flex items-center gap-1.5"><span class="text-[11px] font-semibold tracking-tighter">5G</span><span class="material-symbols-outlined text-[16px]">wifi</span><span class="material-symbols-outlined text-[18px]">battery_full</span></div></div><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2.5 min-w-0"><img alt="Anchor Parent Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDy6QVBRnr3XO9CegfwGaBRJQo_zNHgfuV0Sdknp2MkMvKEaWbKw9KPldxokPfFLtqvGBKZ6gA8pT1Rltw-vZK_4G0d8YRMXsJsJSY70sjf7xBW4_GmZKfFa7CVWF0wA7BMS8h3N5crF1jLdJvXevixP8EvTITx58UnyEMf1XK9ymz-nUmSxOwCmIcd7JZTjdokwRpEdvEWRgfGPRXoiqcMI-wxas0pX_oM43x84qg"/><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface truncate">Anchor Parent</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Family Dashboard</span></div></div><div class="flex items-center gap-2"><button class="min-h-[44px] px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 transition-colors" type="button"><span class="w-2 h-2 rounded-full bg-status-enforced"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Family (2)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FS5umrR2WoScL2OVZtL8Bv6wPauaXgjFhCTjtFkcA7qkDFvDFRH40fKNcwh-Xmkzd8IeaoxQxekbnMEFZrpLQmmrI-YreKZ-SMwc6lsyQJ3z_3CcqPVtv5-8Mg8beWOubN2kmr6-U3z2WuqCOWyqDCOdftmFE99ZaVqEs5UJDPrEItjkRcrNN0lyQ0dJe_f8S3ZqSX8YfGbOFh9UMkYvVyGxJfOFIsc5Pm_-3FYG"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-28"><div class="flex flex-col w-full pb-8">
+<!-- Sentinel Ambient Live Status -->
+<div class="px-4 pt-3 pb-2">
+<div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="relative flex h-2.5 w-2.5 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-enforced opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-status-enforced"></span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Safety Sentinel Active</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+<span class="font-label-sm text-label-sm font-semibold">4/4 Connected</span>
+</div>
+</div>
+</div>
+<!-- Screen Heading -->
+<div class="px-4 pt-2 pb-3">
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Alerts &amp; SOS Activity</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Real-time safety events, geofence milestones, and emergency SOS check-ins for your family circle.</p>
+</div>
+<!-- Section 1: Emergency SOS Calm State Card -->
+<div class="px-4 py-2">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest shadow-md p-4">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">All Quiet &amp; Protected</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Normal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">No active SOS emergencies across any device</p>
+</div>
+</div>
+</div>
+<div class="mt-3.5 pt-3 bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">fact_check</span>
+            Last drill test: 4 days ago by Sarah
+          </span>
+<span class="text-status-enforced font-medium">Verified 1.4s delivery</span>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<span class="material-symbols-outlined text-[18px] text-status-pending shrink-0 mt-0.5">campaign</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            If an SOS is triggered by Leo, high-priority audible siren sounds on all Primary Guardians' phones, even in Do Not Disturb.
+          </p>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="mt-3.5 flex items-center gap-2">
+<button class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.98] transition-all" id="test-drill-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+          Test Family SOS Siren
+        </button>
+<button aria-label="Emergency Protocol Explainer" class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" id="info-protocol-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">info</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: Quick Filter Tabs (Horizontal Pill Rail) -->
+<div class="pt-3 pb-1">
+<div class="flex items-center gap-2 overflow-x-auto px-4 no-scrollbar">
+<button class="filter-chip active-filter shrink-0 min-h-[48px] px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" data-filter="all">
+<span>All Events</span>
+<span class="px-1.5 py-0.5 rounded-full bg-on-primary/20 text-on-primary text-[11px] font-bold">14</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[48px] px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-all" data-filter="sos">
+<span class="material-symbols-outlined text-[16px] text-error">emergency</span>
+<span>Emergency &amp; SOS</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container text-[11px] font-bold">1</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[48px] px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-all" data-filter="geofence">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span>Geofences</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-bold">8</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[48px] px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-all" data-filter="device">
+<span class="material-symbols-outlined text-[16px] text-secondary">phonelink_setup</span>
+<span>Device Health</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-bold">5</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Detailed Safety Timeline -->
+<div class="px-4 pt-3 flex flex-col gap-5">
+<!-- Group: TODAY -->
+<div class="timeline-group flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">today</span>
+          Today, Tuesday
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 updates</span>
+</div>
+<!-- Item A: Geofence Departure -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="geofence">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">transfer_within_a_station</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Departed Oakridge Middle</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Geofence</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3:32 PM • Leo's Galaxy A34</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">24m ago</span>
+</div>
+<div class="mt-3 pl-11 flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Verified GPS ping at West Gate perimeter. Auto-notified: <span class="text-on-surface font-medium">Sarah</span> &amp; <span class="text-on-surface font-medium">Mark</span>.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-status-enforced">navigation</span>
+<span>In transit to Home Sanctuary (Est. 3:55 PM)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item B: Geofence Arrival -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="geofence">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/40 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Arrived at School Safe</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">On Schedule</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8:15 AM • Oakridge Middle Campus</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">7h ago</span>
+</div>
+<div class="mt-3 pl-11 flex flex-col gap-1.5">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            On-schedule arrival cross-verified via School Wi-Fi + Cell Tower. Switched profile automatically to <span class="text-primary font-medium">School Hours Focus Rule</span>.
+          </p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[15px] text-status-enforced">check_circle</span>
+<span>Distraction lock enabled until 3:30 PM</span>
+</div>
+</div>
+</div>
+<!-- Item C: Device Alert Low Battery -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="device">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-status-pending">
+<span class="material-symbols-outlined text-[20px]">battery_alert</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Low Battery Notice (15%)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-status-pending font-label-sm text-label-sm font-semibold">Resolved</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7:45 AM • Morning departure check</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">8h ago</span>
+</div>
+<div class="mt-3 pl-11">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Prompted bedtime charging dock reminder. Device was connected to rapid charger before transit and reached 78% by 8:05 AM.
+          </p>
+</div>
+</div>
+</div>
+<!-- Group: YESTERDAY -->
+<div class="timeline-group flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">history</span>
+          Yesterday, Monday
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 updates</span>
+</div>
+<!-- Item D: Safe Check-in Quick Tap -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="geofence">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/50 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Leo Tap Check-in: "At Soccer"</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">1-Tap Pin</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4:02 PM • West End Athletic Turf</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Mon</span>
+</div>
+<div class="mt-3 pl-11 flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Child-initiated transparent check-in with high precision GPS location (3m accuracy). Acknowledged with heart reply by Mom &amp; Dad.
+          </p>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              Sarah acknowledged
+            </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              Mark acknowledged
+            </span>
+</div>
+</div>
+</div>
+<!-- Item E: Device Integrity Knox Check -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="device">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Daily Knox Integrity Passed</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">9:00 AM • Routine Security Scan</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Mon</span>
+</div>
+<div class="mt-3 pl-11">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            OS sandbox untampered, device management permissions validated, GPS spoofing protection active. Zero anomalies detected.
+          </p>
+</div>
+</div>
+</div>
+<!-- Group: EARLIER THIS WEEK (Emergency Test Drill) -->
+<div class="timeline-group flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-error">notification_important</span>
+          Earlier This Week
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saturday drill</span>
+</div>
+<!-- Item F: TEST SOS EVENT -->
+<div class="timeline-card rounded-2xl bg-surface-container-lowest p-4 shadow-sm" data-category="sos">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-error-container/70 flex items-center justify-center shrink-0 text-status-failed">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Emergency SOS Check-in Test</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">PRACTICE DRILL</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saturday 11:30 AM • Leo's Phone</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">4d ago</span>
+</div>
+<div class="mt-3 pl-11 flex flex-col gap-2.5">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Triggered from Leo's Galaxy A34 during family safety practice drill. Dispatched immediate siren push and SMS broadcast to Sarah Jenkins, Mark Jenkins, and Grandma Eleanor in <span class="font-semibold text-status-enforced">1.4 seconds</span>.
+          </p>
+<!-- Audio sample card -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<button aria-label="Play 5s ambient clip" class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">5s Ambient Audio Clip</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recorded automatically upon trigger</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-status-enforced font-medium px-2 py-0.5 rounded bg-surface-container">00:05</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[15px]">done_all</span>
+              Resolved &amp; Cleared by Sarah (Mom)
+            </span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">
+              View Drill Logs
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Guardian Notification Escalation Rules -->
+<div class="px-4 pt-6">
+<div class="rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Emergency Escalation Chain</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automatic failsafe protocol for unanswered SOS triggers</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<!-- Escalation Steps Graphic -->
+<div class="mt-1 flex flex-col gap-2.5 pl-2 relative">
+<!-- Vertical connector line -->
+<div class="absolute left-6 top-3 bottom-3 w-0.5 bg-surface-container-high"></div>
+<!-- Tier 1 -->
+<div class="flex items-start gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 shadow-sm">
+            1
+          </div>
+<div class="min-w-0 pt-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Tier 1: Instant Critical Siren &amp; Push</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Overrides Do-Not-Disturb on phones of Sarah (Mom) &amp; Mark (Dad)</p>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="flex items-start gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">
+            2
+          </div>
+<div class="min-w-0 pt-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Tier 2: Unacknowledged after 3 min</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated voice call &amp; priority SMS sent to Grandma Eleanor (Trusted Ally)</p>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="flex items-start gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">
+            3
+          </div>
+<div class="min-w-0 pt-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Tier 3: Unacknowledged after 6 min</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct 911 dispatch contact prompt delivered to all circle members with live GPS track</p>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span>Configure Escalation Chain &amp; Trusted Allies</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 5: Child SOS Button Transparency Notice -->
+<div class="px-4 pt-4">
+<div class="rounded-2xl bg-surface-container-low p-4 flex items-start gap-3.5 shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[22px]">lock_open</span>
+</div>
+<div class="flex-1">
+<span class="font-title-sm text-title-sm text-on-surface block">Collaborative &amp; Always Accessible</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Leo has a dedicated 1-tap SOS button always visible on his lock screen and in the Anchor Child app — even during scheduled bedtime downtime and locked application windows.
+        </p>
+<div class="mt-2 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface text-secondary font-label-sm text-label-sm font-medium">Never blocked by parent rules</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Drill Simulation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-end justify-center p-4" id="drill-modal">
+<div class="w-full max-w-lg rounded-3xl bg-surface p-5 shadow-2xl flex flex-col gap-4 transform transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Family SOS Drill Test</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Practice notification transmission</span>
+</div>
+</div>
+<button aria-label="Close" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-drill-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Running a test sends a marked <strong class="text-on-surface">[SAFETY PRACTICE DRILL]</strong> push alert to Sarah, Mark, and Eleanor. It confirms phone siren bypass without alerting emergency services.
+        </p>
+<div class="flex items-center gap-2 text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Zero risk of false 911 dispatch</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full min-h-[48px] rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm" id="execute-drill-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+          Execute Test Ping (All Guardians)
+        </button>
+<button class="w-full min-h-[48px] rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-medium" id="cancel-drill-btn" type="button">
+          Cancel
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Feedback Element -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-8 opacity-0 pointer-events-none transition-all duration-300 flex justify-center" id="toast">
+<div class="px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span id="toast-message">Safety drill broadcast successfully verified!</span>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Filter chip interaction
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    const timelineGroups = document.querySelectorAll('.timeline-group');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'active-filter');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        btn.classList.add('bg-primary', 'text-on-primary', 'active-filter');
+
+        const filter = btn.dataset.filter;
+
+        timelineCards.forEach((card) => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Toggle timeline groups if empty
+        timelineGroups.forEach((group) => {
+          const visibleCards = group.querySelectorAll('.timeline-card[style="display: block;"], .timeline-card:not([style*="display: none"])');
+          const isFilterActive = filter !== 'all';
+          const matchCount = Array.from(group.querySelectorAll('.timeline-card')).filter(c => filter === 'all' || c.dataset.category === filter).length;
+          
+          if (matchCount === 0 && isFilterActive) {
+            group.style.display = 'none';
+          } else {
+            group.style.display = 'flex';
+          }
+        });
+      });
+    });
+
+    // Drill Modal interactions
+    const testDrillBtn = document.getElementById('test-drill-btn');
+    const infoProtocolBtn = document.getElementById('info-protocol-btn');
+    const drillModal = document.getElementById('drill-modal');
+    const closeDrillModal = document.getElementById('close-drill-modal');
+    const cancelDrillBtn = document.getElementById('cancel-drill-btn');
+    const executeDrillBtn = document.getElementById('execute-drill-btn');
+    const toast = document.getElementById('toast');
+    const toastMessage = document.getElementById('toast-message');
+
+    function openModal() {
+      drillModal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      drillModal.classList.add('hidden');
+    }
+
+    function showToast(msg) {
+      if (toastMessage) toastMessage.textContent = msg;
+      toast.classList.remove('translate-y-8', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+      }, 3200);
+    }
+
+    if (testDrillBtn) testDrillBtn.addEventListener('click', openModal);
+    if (infoProtocolBtn) infoProtocolBtn.addEventListener('click', openModal);
+    if (closeDrillModal) closeDrillModal.addEventListener('click', closeModal);
+    if (cancelDrillBtn) cancelDrillBtn.addEventListener('click', closeModal);
+
+    if (executeDrillBtn) {
+      executeDrillBtn.addEventListener('click', () => {
+        closeModal();
+        showToast('Drill sent: 3 guardian phones acknowledged in 1.2s');
+      });
+    }
+
+    // Modal backdrop click
+    if (drillModal) {
+      drillModal.addEventListener('click', (e) => {
+        if (e.target === drillModal) closeModal();
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="app-usage-and-limits" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm mt-0.5">Rules</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="geofences-and-location" href="#"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm mt-0.5">Location</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors relative" data-path="time-requests" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-2 px-1 min-w-[16px] h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] leading-4 text-center font-bold">1</span></div><span class="font-label-sm text-label-sm mt-0.5">Requests</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-2 py-1 text-on-surface-variant transition-colors" data-path="family-and-settings" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Family</span></a></div><div class="h-4 flex items-center justify-center pb-1"><div class="w-28 h-1 rounded-full bg-on-surface-variant/30"></div></div></nav></body></html>
